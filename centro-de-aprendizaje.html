@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmósfera de Seguridad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+<div class="logo">
+    <img src="images/logo.png" alt="Atmósfera de Seguridad" class="logo-image">
+    <div class="logo-text">
+        <!--<span class="brand-name">ATMÓSFERA DE SEGURIDAD</span>
+        <span class="brand-tagline">Vigilancia y Seguridad Privada</span>-->
+    </div>
+</div>
+
+            <!-- Enlaces de navegación (Desktop) -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                <li><a href="centro-de-aprendizaje.html">Centro de Aprendizaje</a></li>
+                <li><a href="#atencion-usuario">Atención al Usuario</a></li>
+                <li><a href="#trabaja-nosotros">Trabaja con Nosotros</a></li>
+                <li><a href="#beneficios">Beneficios ATM</a></li>
+            </ul>
+
+            <a href="#contacto" class="cta-button">Solicitar Cotización</a>
+
+            <!-- Botón de menú hamburguesa (Móvil) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <!-- Menú móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#inicio" class="mobile-link active">Inicio</a></li>
+                <li><a href="#quienes-somos" class="mobile-link">¿Quiénes Somos?</a></li>
+                <li><a href="#centro-aprendizaje" class="mobile-link">Centro de Aprendizaje</a></li>
+                <li><a href="#atencion-usuario" class="mobile-link">Atención al Usuario</a></li>
+                <li><a href="#trabaja-nosotros" class="mobile-link">Trabaja con Nosotros</a></li>
+                <li><a href="#beneficios" class="mobile-link">Beneficios ATM</a></li>
+            </ul>
+            <div class="mobile-cta">
+                <a href="#contacto" class="cta-button" style="display: block; text-align: center;">Solicitar Cotización</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <main>
+
+<!-- ========================================
+     SECCIÓN 1: POLÍTICAS DE LA COMPAÑÍA
+     ======================================== -->
+<section id="politicas" class="policies-section">
+    <div class="section-header">
+        <h2><span class="highlight">Políticas</span> de la Compañía</h2>
+        <p>Conoce nuestras políticas y procedimientos corporativos</p>
+    </div>
+
+    <div class="policies-container">
+        <div class="policy-card">
+            <div class="policy-icon">📋</div>
+            <h3>Política de Calidad</h3>
+            <p>Nuestro compromiso con la excelencia en cada servicio que ofrecemos a nuestros clientes.</p>
+            <a href="docs/politica-calidad.pdf" class="policy-link" download>Descargar PDF →</a>
+        </div>
+
+        <div class="policy-card">
+            <div class="policy-icon">🔒</div>
+            <h3>Seguridad y Salud</h3>
+            <p>Directrices para mantener un ambiente de trabajo seguro y saludable para todo nuestro equipo.</p>
+            <a href="docs/politica-sst.pdf" class="policy-link" download>Descargar PDF →</a>
+        </div>
+
+        <div class="policy-card">
+            <div class="policy-icon">⚖️</div>
+            <h3>Código de Ética</h3>
+            <p>Valores y principios que guían nuestro comportamiento profesional y empresarial.</p>
+            <a href="docs/codigo-etica.pdf" class="policy-link" download>Descargar PDF →</a>
+        </div>
+
+        <div class="policy-card">
+            <div class="policy-icon">🌿</div>
+            <h3>Política Ambiental</h3>
+            <p>Compromiso con la sostenibilidad y el cuidado del medio ambiente.</p>
+            <a href="docs/politica-ambiental.pdf" class="policy-link" download>Descargar PDF →</a>
+        </div>
+
+        <div class="policy-card">
+            <div class="policy-icon">👥</div>
+            <h3>Recursos Humanos</h3>
+            <p>Políticas de contratación, desarrollo y bienestar de nuestro personal.</p>
+            <a href="docs/politica-rrhh.pdf" class="policy-link" download>Descargar PDF →</a>
+        </div>
+
+        <div class="policy-card">
+            <div class="policy-icon">🔐</div>
+            <h3>Privacidad de Datos</h3>
+            <p>Protección y manejo responsable de la información personal y corporativa.</p>
+            <a href="docs/politica-privacidad.pdf" class="policy-link" download>Descargar PDF →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     SECCIÓN 2: CENTRO DE APRENDIZAJE
+     ======================================== -->
+<section id="centro-aprendizaje" class="training-section">
+    <div class="section-header">
+        <h2>Centro de <span class="highlight">Aprendizaje</span></h2>
+        <p>Material de capacitación y desarrollo profesional</p>
+    </div>
+
+    <div class="training-tabs">
+        <button class="tab-button active" data-filter="all">Todos</button>
+        <button class="tab-button" data-filter="video">Videos</button>
+        <button class="tab-button" data-filter="pdf">Documentos</button>
+        <button class="tab-button" data-filter="ppt">Presentaciones</button>
+    </div>
+
+    <div class="training-grid" id="trainingGrid">
+        <!-- VIDEOS -->
+        <div class="training-card" data-type="video">
+            <div class="training-thumbnail">
+                🎥
+                <div class="play-icon">▶</div>
+            </div>
+            <div class="training-content">
+                <span class="training-type">VIDEO</span>
+                <h4>Protocolos de Seguridad Básica</h4>
+                <p>Procedimientos fundamentales para operaciones de vigilancia.</p>
+                <div class="training-meta">
+                    <span>⏱️ 15 min</span>
+                    <a href="videos/seguridad-basica.mp4" class="download-btn" target="_blank">Ver →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="training-card" data-type="video">
+            <div class="training-thumbnail">
+                🎥
+                <div class="play-icon">▶</div>
+            </div>
+            <div class="training-content">
+                <span class="training-type">VIDEO</span>
+                <h4>Uso de Tecnología</h4>
+                <p>Sistemas de vigilancia y monitoreo digital.</p>
+                <div class="training-meta">
+                    <span>⏱️ 20 min</span>
+                    <a href="videos/tecnologia.mp4" class="download-btn" target="_blank">Ver →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PDFs -->
+        <div class="training-card" data-type="pdf">
+            <div class="training-thumbnail">
+                📄
+            </div>
+            <div class="training-content">
+                <span class="training-type">PDF</span>
+                <h4>Manual de Procedimientos</h4>
+                <p>Guía completa de protocolos operativos.</p>
+                <div class="training-meta">
+                    <span>📑 45 páginas</span>
+                    <a href="docs/manual-procedimientos.pdf" class="download-btn" download>Descargar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PPT -->
+        <div class="training-card" data-type="ppt">
+            <div class="training-thumbnail">
+                📊
+            </div>
+            <div class="training-content">
+                <span class="training-type">PPT</span>
+                <h4>Servicio al Cliente</h4>
+                <p>Excelencia en atención y comunicación.</p>
+                <div class="training-meta">
+                    <span>📑 30 slides</span>
+                    <a href="docs/servicio-cliente.pptx" class="download-btn" download>Descargar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     SECCIÓN 3: PROGRAMA DE INDUCCIÓN
+     ======================================== -->
+<section id="inducciones" class="induction-section">
+    <div class="section-header">
+        <h2>Programa de <span class="highlight">Inducción</span></h2>
+        <p>Material para nuevos integrantes del equipo</p>
+    </div>
+
+    <div class="induction-container">
+        <div class="induction-list">
+            <div class="induction-item">
+                <div class="induction-number">01</div>
+                <div class="induction-info">
+                    <h4>Bienvenida e Historia</h4>
+                    <p>Conoce nuestra empresa, misión, visión y valores corporativos. Presentación de la estructura organizacional.</p>
+                </div>
+                <div class="induction-actions">
+                    <button class="action-btn view-btn" onclick="viewInduction('induccion-01.pdf')">Ver</button>
+                    <a href="docs/induccion-01.pdf" class="action-btn download-btn-induction" download>📥 Descargar</a>
+                </div>
+            </div>
+
+            <div class="induction-item">
+                <div class="induction-number">02</div>
+                <div class="induction-info">
+                    <h4>Normativa y Reglamento</h4>
+                    <p>Políticas internas, código de conducta y reglamento laboral. Derechos y deberes del personal.</p>
+                </div>
+                <div class="induction-actions">
+                    <button class="action-btn view-btn" onclick="viewInduction('induccion-02.pdf')">Ver</button>
+                    <a href="docs/induccion-02.pdf" class="action-btn download-btn-induction" download>📥 Descargar</a>
+                </div>
+            </div>
+
+            <div class="induction-item">
+                <div class="induction-number">03</div>
+                <div class="induction-info">
+                    <h4>Seguridad Operacional</h4>
+                    <p>Protocolos de seguridad, manejo de emergencias y uso de equipos de protección personal.</p>
+                </div>
+                <div class="induction-actions">
+                    <button class="action-btn view-btn" onclick="viewInduction('induccion-03.pdf')">Ver</button>
+                    <a href="docs/induccion-03.pdf" class="action-btn download-btn-induction" download>📥 Descargar</a>
+                </div>
+            </div>
+
+            <div class="induction-item">
+                <div class="induction-number">04</div>
+                <div class="induction-info">
+                    <h4>Sistemas y Tecnología</h4>
+                    <p>Capacitación en sistemas internos, herramientas tecnológicas y plataformas digitales.</p>
+                </div>
+                <div class="induction-actions">
+                    <button class="action-btn view-btn" onclick="viewInduction('induccion-04.pdf')">Ver</button>
+                    <a href="docs/induccion-04.pdf" class="action-btn download-btn-induction" download>📥 Descargar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Logo y marca -->
+        <div class="footer-brand">
+            <img src="images/logo.png" alt="Atmósfera de Seguridad" class="footer-logo">
+            <p class="footer-description">
+                Protección, confianza y respaldo profesional en seguridad privada.
+            </p>
+        </div>
+
+        <!-- Contacto -->
+        <div class="footer-column">
+            <h4>Contacto</h4>
+            <ul>
+                <li>📧 info@atmosferadeseguridad.com</li>
+                <li>📞 +57 300 000 0000</li>
+                <li>☎️ +57 601 000 0000</li>
+            </ul>
+        </div>
+
+        <!-- Enlaces -->
+        <div class="footer-column">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                <li><a href="centro-de-aprendizaje.html">Centro de Aprendizaje</a></li>
+                <li><a href="#atencion-usuario">Atención al Usuario</a></li>
+                <li><a href="#beneficios">Beneficios ATM</a></li>
+            </ul>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="footer-column">
+            <h4>Síguenos</h4>
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Línea inferior -->
+    <div class="footer-bottom">
+        © 2026 Atmósfera de Seguridad. Todos los derechos reservados.
+    </div>
+</footer>
+
+
+
+
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

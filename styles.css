@@ -1,0 +1,1628 @@
+/* ==========================================
+   ATMÓSFERA DE SEGURIDAD - STYLES.CSS
+   Colores Corporativos:
+   - Ebony: #162332
+   - Amarillo Dorado: #F9DD47
+   - Gris Claro: #A8A8A8
+   - Gris Oscuro: #272727
+   ========================================== */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arimo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   BARRA DE NAVEGACIÓN
+   ========================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #162332;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+/* ==========================================
+   LOGO
+   ========================================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.logo-image {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-text .brand-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #F9DD47;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.logo-text .brand-tagline {
+    font-size: 10px;
+    font-weight: 400;
+    color: #A8A8A8;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+    margin-top: 1px;
+}
+
+/* ==========================================
+   ENLACES DE NAVEGACIÓN (DESKTOP)
+   ========================================== */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #A8A8A8;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: block;
+    white-space: nowrap;
+}
+
+.nav-links li a:hover {
+    color: #F9DD47;
+    background-color: rgba(249, 221, 71, 0.1);
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #F9DD47;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 70%;
+}
+
+.nav-links li a.active {
+    color: #F9DD47;
+    background-color: rgba(249, 221, 71, 0.15);
+}
+
+/* ==========================================
+   BOTÓN CTA
+   ========================================== */
+
+.cta-button {
+    background: linear-gradient(135deg, #F9DD47 0%, #e6c932 100%);
+    color: #162332;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(249, 221, 71, 0.3);
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(249, 221, 71, 0.5);
+    background: linear-gradient(135deg, #fce566 0%, #F9DD47 100%);
+}
+
+/* ==========================================
+   BOTÓN HAMBURGUESA (MÓVIL)
+   ========================================== */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger {
+    width: 100%;
+    height: 3px;
+    background-color: #F9DD47;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active .hamburger:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-toggle.active .hamburger:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .hamburger:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ==========================================
+   MENÚ MÓVIL
+   ========================================== */
+
+.mobile-menu {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background-color: #1a2938;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu.active {
+    max-height: 500px;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.mobile-menu ul li {
+    text-align: center;
+    border-bottom: 1px solid rgba(168, 168, 168, 0.1);
+}
+
+.mobile-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.mobile-link {
+    display: block;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #A8A8A8;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.mobile-link:hover,
+.mobile-link.active {
+    background-color: rgba(249, 221, 71, 0.1);
+    color: #F9DD47;
+}
+
+.mobile-cta {
+    margin: 20px 20px 10px;
+}
+
+/* ==========================================
+   RESPONSIVE - TABLET
+   ========================================== */
+
+@media screen and (max-width: 1024px) {
+    .nav-container {
+        padding: 0 25px;
+    }
+
+    .nav-links {
+        gap: 0;
+    }
+
+    .nav-links li a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .cta-button {
+        padding: 9px 20px;
+        font-size: 12px;
+    }
+
+    .logo-image {
+        height: 44px;
+    }
+
+    .logo-text .brand-name {
+        font-size: 15px;
+    }
+
+    .logo-text .brand-tagline {
+        font-size: 9px;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE - MÓVIL
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .cta-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-container {
+        height: 65px;
+        padding: 0 20px;
+    }
+
+    .mobile-menu {
+        top: 65px;
+    }
+
+    .logo-image {
+        height: 42px;
+    }
+
+    .logo-text .brand-name {
+        font-size: 14px;
+    }
+
+    .logo-text .brand-tagline {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        gap: 8px;
+    }
+
+    .logo-image {
+        height: 38px;
+    }
+
+    .logo-text .brand-name {
+        font-size: 12px;
+    }
+
+    .logo-text .brand-tagline {
+        font-size: 8px;
+    }
+
+    .nav-container {
+        padding: 0 15px;
+    }
+}
+
+
+
+/* ==========================================
+   BANNER SECTION - CARDS FLOTANTES
+   ========================================== */
+
+.banner-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 80px;
+    background: linear-gradient(135deg, #162332 0%, #1a2d3f 50%, #162332 100%);
+    overflow: hidden;
+}
+
+/* Patrón de fondo decorativo */
+.banner-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(30deg, rgba(249, 221, 71, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(249, 221, 71, 0.03) 87.5%, rgba(249, 221, 71, 0.03)),
+        linear-gradient(150deg, rgba(249, 221, 71, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(249, 221, 71, 0.03) 87.5%, rgba(249, 221, 71, 0.03)),
+        linear-gradient(30deg, rgba(249, 221, 71, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(249, 221, 71, 0.03) 87.5%, rgba(249, 221, 71, 0.03)),
+        linear-gradient(150deg, rgba(249, 221, 71, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(249, 221, 71, 0.03) 87.5%, rgba(249, 221, 71, 0.03));
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+    opacity: 0.3;
+}
+
+.banner-container {
+    position: relative;
+    max-width: 1400px;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Título del Banner */
+.banner-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.banner-title h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner-title .highlight {
+    color: #F9DD47;
+}
+
+.banner-title p {
+    font-size: 1.2rem;
+    color: #A8A8A8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Card Individual */
+.card {
+    position: relative;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(249, 221, 71, 0.3);
+}
+
+/* Imagen de fondo de la card */
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-image {
+    transform: scale(1.1);
+}
+
+/* Overlay oscuro */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(22, 35, 50, 0.3) 0%, rgba(22, 35, 50, 0.9) 100%);
+    transition: background 0.4s ease;
+}
+
+.card:hover .card-overlay {
+    background: linear-gradient(to bottom, rgba(22, 35, 50, 0.4) 0%, rgba(22, 35, 50, 0.95) 100%);
+}
+
+/* Contenido de la card */
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    z-index: 2;
+    text-align: center;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #F9DD47 0%, #e6c932 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 24px;
+    box-shadow: 0 4px 15px rgba(249, 221, 71, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: #A8A8A8;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive - Tablet */
+@media screen and (max-width: 1200px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+/* Responsive - Móvil */
+@media screen and (max-width: 768px) {
+    .banner-section {
+        padding: 100px 15px 60px;
+    }
+
+    .banner-title h1 {
+        font-size: 2.2rem;
+    }
+
+    .banner-title p {
+        font-size: 1rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .card {
+        height: 280px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner-title {
+        margin-bottom: 40px;
+    }
+
+    .banner-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        height: 260px;
+    }
+
+    .card-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+
+/* ==========================================
+   SECCIÓN FORMULARIO DE CONTACTO - LIMPIO
+   ========================================== */
+
+.contact-section {
+    min-height: 100vh;
+    padding: 120px 20px 80px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-wrapper {
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    padding: 60px;
+    border-radius: 16px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-header h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #162332;
+    margin-bottom: 15px;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #162332;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 16px 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Arimo', sans-serif;
+    transition: all 0.3s ease;
+    background: #fafafa;
+    color: #272727;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #F9DD47;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(249, 221, 71, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #F9DD47 0%, #e6c932 100%);
+    color: #162332;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 4px 20px rgba(249, 221, 71, 0.4);
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(249, 221, 71, 0.6);
+}
+
+.submit-btn:active {
+    transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-message {
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    display: none;
+}
+
+.form-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+    display: block;
+}
+
+.form-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+    display: block;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .contact-section {
+        padding: 100px 15px 60px;
+    }
+
+    .contact-wrapper {
+        padding: 40px 25px;
+    }
+
+    .contact-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact-header p {
+        font-size: 1rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .submit-btn {
+        padding: 16px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-wrapper {
+        padding: 30px 20px;
+    }
+
+    .contact-header {
+        margin-bottom: 35px;
+    }
+
+    .contact-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 14px 16px;
+        font-size: 0.95rem;
+    }
+}
+
+
+/* ==========================================
+   SECCIÓN MAPA - SOLO UBICACIÓN
+   ========================================== */
+
+.map-section {
+    width: 100%;
+    height: 600px;
+    padding: 0;
+    margin: 0;
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .map-section {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .map-section {
+        height: 400px;
+    }
+}
+
+
+
+/* ===============================
+   FOOTER - ATMÓSFERA DE SEGURIDAD
+================================ */
+
+.footer {
+    background-color: #162332; /* Ebony */
+    color: #A8A8A8;
+    padding: 60px 20px 30px;
+    font-family: 'Arimo', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+/* Marca */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-logo {
+    width: 160px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.footer-description {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Columnas */
+.footer-column h4 {
+    color: #F9DD47;
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Enlaces */
+.footer-column a {
+    color: #A8A8A8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #F9DD47;
+}
+
+/* Redes */
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Parte inferior */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #A8A8A8;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-brand,
+    .footer-column {
+        align-items: center;
+    }
+
+    .footer-socials {
+        align-items: center;
+    }
+}
+
+
+
+
+/* ========== RESPONSIVE ========== */
+
+@media screen and (max-width: 1024px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-info {
+        padding: 20px;
+    }
+
+    .contact-info-content h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-section {
+        padding: 80px 15px 60px;
+    }
+
+    .form-card {
+        padding: 30px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .contact-info-content h2 {
+        font-size: 1.9rem;
+    }
+
+    .info-item {
+        padding: 15px;
+    }
+
+    .info-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .contact-info-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .submit-button {
+        padding: 14px 30px;
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+/* ===================================================
+   QUIÉNES SOMOS - SECCIONES NUEVAS
+   Compatible con el CSS existente
+=================================================== */
+
+/* Ajuste general por navbar fija */
+.page-content {
+    padding-top: 90px;
+}
+
+/* Contenedor reutilizable */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+/* ===============================
+   IDENTIDAD
+================================ */
+.identity-section {
+    background-color: #ffffff;
+}
+
+.identity-section h1 {
+    color: #162332;
+    font-size: 34px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.identity-text {
+    max-width: 850px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #272727;
+    text-align: center;
+}
+
+/* ===============================
+   CERTIFICACIONES
+================================ */
+.certifications-section {
+    background-color: #f5f5f5;
+}
+
+.certifications-section h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #162332;
+    margin-bottom: 50px;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 25px;
+}
+
+.cert-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-6px);
+}
+
+.cert-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Overlay hover */
+.cert-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(22,35,50,0.92);
+    color: #ffffff;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.cert-overlay h3 {
+    color: #F9DD47;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.cert-overlay p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.cert-card:hover .cert-overlay {
+    opacity: 1;
+}
+
+/* ===============================
+   ZONA CLIENTE
+================================ */
+.client-zone {
+    background-color: #ffffff;
+}
+
+.client-zone h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #162332;
+    margin-bottom: 45px;
+}
+
+.client-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 35px;
+}
+
+.client-item {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+.client-item:hover {
+    transform: translateY(-6px);
+}
+
+.client-item span {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.client-item p {
+    font-size: 15px;
+    color: #272727;
+    line-height: 1.6;
+}
+
+/* ===============================
+   INDICADORES
+================================ */
+.indicators-section {
+    background: linear-gradient(135deg, #162332, #1f2f45);
+    color: #ffffff;
+}
+
+.indicators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.indicator h3 {
+    font-size: 42px;
+    color: #F9DD47;
+    margin-bottom: 10px;
+}
+
+.indicator p {
+    font-size: 15px;
+    color: #A8A8A8;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+
+    .identity-section h1 {
+        font-size: 28px;
+    }
+
+    .certifications-section h2,
+    .client-zone h2 {
+        font-size: 26px;
+    }
+
+    .indicator h3 {
+        font-size: 34px;
+    }
+}
+
+
+
+
+/* ==========================================
+   SECCIÓN POLÍTICAS DE LA COMPAÑÍA
+   ========================================== */
+
+.policies-section {
+    padding: 100px 20px 80px;
+    background: linear-gradient(135deg, #162332 0%, #1a2d3f 100%);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.policies-section .section-header h2 {
+    color: white;
+}
+
+.section-header .highlight {
+    color: #F9DD47;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #A8A8A8;
+}
+
+.policies-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.policy-card {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border-left: 4px solid #F9DD47;
+}
+
+.policy-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(249, 221, 71, 0.3);
+}
+
+.policy-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #F9DD47 0%, #e6c932 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(249, 221, 71, 0.4);
+}
+
+.policy-card h3 {
+    font-size: 1.4rem;
+    color: #162332;
+    margin-bottom: 12px;
+}
+
+.policy-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.policy-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #162332;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.policy-link:hover {
+    color: #F9DD47;
+    gap: 12px;
+}
+
+/* ==========================================
+   SECCIÓN CAPACITACIONES
+   ========================================== */
+
+.training-section {
+    padding: 100px 20px 80px;
+    background: white;
+}
+
+.training-section .section-header h2 {
+    color: #162332;
+}
+
+.training-tabs {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    padding: 12px 30px;
+    background: #f5f5f5;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Arimo', sans-serif;
+}
+
+.tab-button.active {
+    background: linear-gradient(135deg, #F9DD47 0%, #e6c932 100%);
+    border-color: #F9DD47;
+    color: #162332;
+}
+
+.tab-button:hover {
+    border-color: #F9DD47;
+}
+
+.training-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.training-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.training-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(22, 35, 50, 0.2);
+}
+
+.training-card.hidden {
+    display: none;
+}
+
+.training-thumbnail {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #162332 0%, #1a2d3f 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    position: relative;
+}
+
+.play-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(249, 221, 71, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #162332;
+}
+
+.training-content {
+    padding: 20px;
+}
+
+.training-type {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #F9DD47;
+    color: #162332;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.training-card h4 {
+    font-size: 1.1rem;
+    color: #162332;
+    margin-bottom: 8px;
+}
+
+.training-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.training-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.training-meta .download-btn {
+    padding: 8px 16px;
+    background: #162332;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.training-meta .download-btn:hover {
+    background: #F9DD47;
+    color: #162332;
+}
+
+/* ==========================================
+   SECCIÓN INDUCCIONES
+   ========================================== */
+
+.induction-section {
+    padding: 100px 20px 80px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.induction-section .section-header h2 {
+    color: #162332;
+}
+
+.induction-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.induction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.induction-item {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 25px;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 5px solid #162332;
+}
+
+.induction-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 6px 25px rgba(249, 221, 71, 0.3);
+    border-left-color: #F9DD47;
+}
+
+.induction-number {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #162332 0%, #1a2d3f 100%);
+    color: #F9DD47;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.induction-info h4 {
+    font-size: 1.3rem;
+    color: #162332;
+    margin-bottom: 8px;
+}
+
+.induction-info p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.induction-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Arimo', sans-serif;
+}
+
+.view-btn {
+    background: #F9DD47;
+    color: #162332;
+}
+
+.view-btn:hover {
+    background: #e6c932;
+    transform: scale(1.05);
+}
+
+.download-btn-induction {
+    background: #162332;
+    color: white;
+}
+
+.download-btn-induction:hover {
+    background: #1a2d3f;
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   RESPONSIVE - TODAS LAS SECCIONES
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+
+    .policies-container,
+    .training-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .training-tabs {
+        flex-direction: column;
+    }
+
+    .tab-button {
+        width: 100%;
+    }
+
+    .induction-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .induction-number {
+        margin: 0 auto;
+    }
+
+    .induction-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .policy-card {
+        padding: 25px;
+    }
+
+    .policy-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .training-thumbnail {
+        height: 150px;
+        font-size: 36px;
+    }
+
+    .induction-number {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+
+    .induction-info h4 {
+        font-size: 1.1rem;
+    }
+
+    .action-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}

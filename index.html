@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmósfera de Seguridad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+<div class="logo">
+    <img src="images/logo.png" alt="Atmósfera de Seguridad" class="logo-image">
+    <div class="logo-text">
+        <!--<span class="brand-name">ATMÓSFERA DE SEGURIDAD</span>
+        <span class="brand-tagline">Vigilancia y Seguridad Privada</span>-->
+    </div>
+</div>
+
+            <!-- Enlaces de navegación (Desktop) -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                <li><a href="centro-de-aprendizaje.html">Centro de Aprendizaje</a></li>
+                <li><a href="#atencion-usuario">Atención al Usuario</a></li>
+                <li><a href="#trabaja-nosotros">Trabaja con Nosotros</a></li>
+                <li><a href="#beneficios">Beneficios ATM</a></li>
+            </ul>
+
+            <a href="#contacto" class="cta-button">Solicitar Cotización</a>
+
+            <!-- Botón de menú hamburguesa (Móvil) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <!-- Menú móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#inicio" class="mobile-link active">Inicio</a></li>
+                <li><a href="#quienes-somos" class="mobile-link">¿Quiénes Somos?</a></li>
+                <li><a href="#centro-aprendizaje" class="mobile-link">Centro de Aprendizaje</a></li>
+                <li><a href="#atencion-usuario" class="mobile-link">Atención al Usuario</a></li>
+                <li><a href="#trabaja-nosotros" class="mobile-link">Trabaja con Nosotros</a></li>
+                <li><a href="#beneficios" class="mobile-link">Beneficios ATM</a></li>
+            </ul>
+            <div class="mobile-cta">
+                <a href="#contacto" class="cta-button" style="display: block; text-align: center;">Solicitar Cotización</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <main>
+        <!-- Banner Section - INICIO -->
+<section id="inicio" class="banner-section">
+    <div class="banner-container">
+        <!-- Título del Banner -->
+        <!--<div class="banner-title">
+            <h1>Nuestros <span class="highlight">Servicios</span></h1>
+            <p>Soluciones integrales de seguridad adaptadas a sus necesidades</p>
+        </div>-->
+
+        <!-- Cards Container -->
+        <div class="cards-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="images/vigilancia-fija.jpg" alt="Vigilancia Fija" class="card-image">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <!--<div class="card-icon">🛡️</div>-->
+                    <h3 class="card-title">Vigilancia Fija</h3>
+                    <p class="card-description">Protección constante con personal altamente capacitado</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="images/vigilancia-movil.jpg" alt="Vigilancia Móvil" class="card-image">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <!--<div class="card-icon">🚗</div>-->
+                    <h3 class="card-title">Vigilancia Móvil</h3>
+                    <p class="card-description">Patrullaje y monitoreo dinámico de áreas extensas</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="images/tecnologia.jpg" alt="Tecnología" class="card-image">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <!--<div class="card-icon">📹</div>-->
+                    <h3 class="card-title">Tecnología</h3>
+                    <p class="card-description">Sistemas avanzados de videovigilancia y control</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="images/escolta.jpg" alt="Escolta" class="card-image">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <!--<div class="card-icon">👥</div>-->
+                    <h3 class="card-title">Escolta</h3>
+                    <p class="card-description">Protección personalizada para personas y mercancías</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+       
+
+<!-- Sección Formulario de Contacto -->
+<section id="atencion-usuario" class="contact-section">
+    <div class="contact-wrapper">
+        <div class="contact-header">
+            <h2>Contáctanos</h2>
+            <p>Completa el formulario y nos pondremos en contacto contigo</p>
+        </div>
+
+        <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="c9698d32-93a4-46c8-b241-aa3b7a8a61fd">
+            <input type="hidden" name="subject" value="Nuevo mensaje - Atmósfera de Seguridad">
+            <input type="hidden" name="from_name" value="Formulario Web">
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="+57 300 123 4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="empresa">Empresa</label>
+                    <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa (opcional)">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <span>Enviar Mensaje</span>
+                <span>→</span>
+            </button>
+
+            <div id="formMessage" class="form-message"></div>
+        </form>
+    </div>
+</section>
+
+
+<!-- Sección Ubicación - Solo Mapa -->
+<section id="ubicacion" class="map-section">
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.584606452234!2d-74.0760556!3d4.6679055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b9d449abb29%3A0x5123eca9ffa53dca!2sATMOSFERA%20DE%20SEGURIDAD%20LTDA!5e0!3m2!1ses!2sco!4v1767569981394!5m2!1ses!2sco"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación Atmósfera de Seguridad">
+        </iframe>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Logo y marca -->
+        <div class="footer-brand">
+            <img src="images/logo.png" alt="Atmósfera de Seguridad" class="footer-logo">
+            <p class="footer-description">
+                Protección, confianza y respaldo profesional en seguridad privada.
+            </p>
+        </div>
+
+        <!-- Contacto -->
+        <div class="footer-column">
+            <h4>Contacto</h4>
+            <ul>
+                <li>📧 info@atmosferadeseguridad.com</li>
+                <li>📞 +57 300 000 0000</li>
+                <li>☎️ +57 601 000 0000</li>
+            </ul>
+        </div>
+
+        <!-- Enlaces -->
+        <div class="footer-column">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                <li><a href="centro-de-aprendizaje.html">Centro de Aprendizaje</a></li>
+                <li><a href="#atencion-usuario">Atención al Usuario</a></li>
+                <li><a href="#beneficios">Beneficios ATM</a></li>
+            </ul>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="footer-column">
+            <h4>Síguenos</h4>
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Línea inferior -->
+    <div class="footer-bottom">
+        © 2026 Atmósfera de Seguridad. Todos los derechos reservados.
+    </div>
+</footer>
+
+
+
+
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
