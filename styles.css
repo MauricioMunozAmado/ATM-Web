@@ -303,7 +303,7 @@ img {
     left: 0;
     width: 100%;
     height: 150px;
-    background: linear-gradient(to bottom, transparent 0%, #f8f9fa 110%);
+    background: linear-gradient(to bottom, transparent 0%, #f8f9fa 105%);
     pointer-events: none;
     z-index: 1;
 }
