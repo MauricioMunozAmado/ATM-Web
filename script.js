@@ -241,4 +241,3 @@ function updateResourceCount() {
 if (document.querySelector('.training-section')) {
     updateResourceCount();
 }
-
