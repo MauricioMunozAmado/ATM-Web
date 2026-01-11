@@ -295,6 +295,19 @@ img {
     z-index: 0;
 }
 
+/* Transición suave hacia la siguiente sección */
+.banner-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent 0%, #f8f9fa 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
 .banner-container {
     position: relative;
     max-width: 1400px;
