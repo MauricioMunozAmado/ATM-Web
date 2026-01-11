@@ -241,3 +241,101 @@ function updateResourceCount() {
 if (document.querySelector('.training-section')) {
     updateResourceCount();
 }
+
+// ==========================================
+// FUNCIONALIDAD DE MODALES DE SERVICIOS
+// ==========================================
+
+const serviceModal = document.getElementById('serviceModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalDescription = document.getElementById('modalDescription');
+const modalHeader = document.querySelector('.modal-header');
+const closeModalBtn = document.querySelector('.close-modal');
+const serviceCards = document.querySelectorAll('.card[data-service]');
+
+// Datos de los servicios
+const servicesData = {
+    'vigilancia-fija': {
+        title: 'Vigilancia Fija',
+        description: 'Ofrecemos servicios de vigilancia física fija con personal altamente calificado y rigurosamente seleccionado. Nuestros guardias están entrenados en control de accesos, prevención de pérdidas, atención al cliente y respuesta ante emergencias. Ideal para conjuntos residenciales, edificios corporativos, plantas industriales y centros comerciales. Garantizamos presencia las 24 horas del día, los 7 días de la semana, adaptándonos a los protocolos específicos de seguridad de su instalación.',
+        image: 'images/vigilancia-fija.jpg'
+    },
+    'vigilancia-movil': {
+        title: 'Vigilancia Móvil',
+        description: 'Nuestro servicio de vigilancia móvil complementa la seguridad estática mediante patrullajes aleatorios o programados. Contamos con vehículos y motocicletas equipados con GPS y comunicación directa con nuestra central de operaciones. Este servicio es perfecto para grandes perímetros, zonas industriales, o clústeres empresariales que requieren una supervisión dinámica para disuadir actividades sospechosas y verificar el estado de las instalaciones.',
+        image: 'images/vigilancia-movil.jpg'
+    },
+    'tecnologia': {
+        title: 'Tecnología en Seguridad',
+        description: 'Integramos soluciones tecnológicas de vanguardia para potenciar su esquema de seguridad. Instalación y monitoreo de circuitos cerrados de televisión (CCTV) con analítica de vídeo, controles de acceso biométricos, sistemas de alarma contra intrusión y detección de incendios. Nuestra central de monitoreo opera 24/7 para gestionar alertas en tiempo real y coordinar respuestas inmediatas con las autoridades competentes.',
+        image: 'images/tecnologia.jpg'
+    },
+    'escolta': {
+        title: 'Servicio de Escolta',
+        description: 'Brindamos protección personalizada a ejecutivos, dignatarios y carga crítica. Nuestro personal de escoltas cuenta con capacitación avanzada en manejo defensivo y evasivo, defensa personal y uso de armas. Planificamos rutas seguras y realizamos avanzadas para minimizar riesgos durante los desplazamientos. Ya sea protección a personas o acompañamiento de mercancías valiosas, su seguridad es nuestra prioridad absoluta.',
+        image: 'images/escolta.jpg'
+    }
+};
+
+// Función para abrir el modal
+function openModal(serviceKey) {
+    const service = servicesData[serviceKey];
+    if (!service) return;
+
+    modalTitle.textContent = service.title;
+    modalDescription.textContent = service.description;
+
+    // Cambiar imagen de fondo del CONTENEDOR PRINCIPAL del modal
+    const modalContent = serviceModal.querySelector('.modal-content');
+    modalContent.style.backgroundImage = `url('${service.image}')`;
+
+    serviceModal.style.display = 'block';
+
+    // Pequeño delay para permitir que la transición de opacidad ocurra
+    setTimeout(() => {
+        serviceModal.classList.add('show');
+    }, 10);
+
+    // Evitar scroll en el body
+    document.body.style.overflow = 'hidden';
+}
+
+// Función para cerrar el modal
+function closeModal() {
+    serviceModal.classList.remove('show');
+
+    setTimeout(() => {
+        serviceModal.style.display = 'none';
+        document.body.style.overflow = ''; // Restaurar scroll
+        // Limpiar imagen de fondo al cerrar para evitar parpadeos al reabrir
+        serviceModal.querySelector('.modal-content').style.backgroundImage = 'none';
+    }, 300); // Esperar a que termine la transición
+}
+
+// Event Listeners
+if (serviceModal) {
+    // Click en las tarjetas
+    serviceCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const serviceKey = card.getAttribute('data-service');
+            openModal(serviceKey);
+        });
+    });
+
+    // Click en botón de cerrar
+    closeModalBtn.addEventListener('click', closeModal);
+
+    // Click fuera del contenido (cerrar)
+    window.addEventListener('click', (e) => {
+        if (e.target === serviceModal) {
+            closeModal();
+        }
+    });
+
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && serviceModal.style.display === 'block') {
+            closeModal();
+        }
+    });
+}
