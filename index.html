@@ -74,7 +74,7 @@
                 <!-- Cards Container -->
                 <div class="cards-container">
                     <!-- Card 1 -->
-                    <div class="card">
+                    <div class="card" data-service="vigilancia-fija">
                         <img src="images/vigilancia-fija.jpg" alt="Vigilancia Fija" class="card-image" loading="lazy">
                         <div class="card-overlay"></div>
                         <div class="card-content">
@@ -84,7 +84,7 @@
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="card">
+                    <div class="card" data-service="vigilancia-movil">
                         <img src="images/vigilancia-movil.jpg" alt="Vigilancia Móvil" class="card-image" loading="lazy">
                         <div class="card-overlay"></div>
                         <div class="card-content">
@@ -94,7 +94,7 @@
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="card">
+                    <div class="card" data-service="tecnologia">
                         <img src="images/tecnologia.jpg" alt="Tecnología" class="card-image" loading="lazy">
                         <div class="card-overlay"></div>
                         <div class="card-content">
@@ -104,7 +104,7 @@
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="card">
+                    <div class="card" data-service="escolta">
                         <img src="images/escolta.jpg" alt="Escolta" class="card-image" loading="lazy">
                         <div class="card-overlay"></div>
                         <div class="card-content">
@@ -197,6 +197,20 @@
         </section>
 
 
+
+        <!-- Modal de Servicios -->
+        <div id="serviceModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-header">
+                    <!-- La imagen de fondo se establecerá vía JS -->
+                    <h2 id="modalTitle">Título del Servicio</h2>
+                </div>
+                <div class="modal-body">
+                    <p id="modalDescription">Descripción detallada del servicio...</p>
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <div class="footer-container">
 
@@ -247,10 +261,6 @@
                 © 2026 Atmósfera de Seguridad. Todos los derechos reservados.
             </div>
         </footer>
-
-
-
-
 
     </main>
 
