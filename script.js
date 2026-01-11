@@ -43,11 +43,11 @@ const sections = document.querySelectorAll('.section');
 
 window.addEventListener('scroll', () => {
     let current = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        
+
         if (window.pageYOffset >= sectionTop - 150) {
             current = section.getAttribute('id');
         }
@@ -66,10 +66,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             const offsetTop = target.offsetTop - 80;
-            
+
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -87,7 +87,7 @@ const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
+    contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
 
         const submitButton = contactForm.querySelector('.submit-btn');
@@ -153,20 +153,20 @@ const trainingCards = document.querySelectorAll('.training-card');
 
 if (tabButtons.length > 0) {
     tabButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             // Remover active de todos los botones
             tabButtons.forEach(btn => btn.classList.remove('active'));
-            
+
             // Agregar active al botón clickeado
             this.classList.add('active');
-            
+
             // Obtener el filtro seleccionado
             const filter = this.getAttribute('data-filter');
-            
+
             // Filtrar las tarjetas
             trainingCards.forEach(card => {
                 const cardType = card.getAttribute('data-type');
-                
+
                 if (filter === 'all' || cardType === filter) {
                     card.classList.remove('hidden');
                 } else {
@@ -184,7 +184,7 @@ if (tabButtons.length > 0) {
 // Función para ver inducción (abrir PDF en nueva ventana)
 function viewInduction(filename) {
     const pdfPath = `docs/${filename}`;
-    
+
     // Verificar si el archivo existe (esto es una simulación)
     // En producción, el navegador manejará si el archivo existe o no
     window.open(pdfPath, '_blank');
@@ -203,7 +203,9 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
+            entry.target.classList.add('visible');
+            // Opcional: Dejar de observar una vez que ya apareció
+            // observer.unobserve(entry.target); 
         }
     });
 }, observerOptions);
@@ -230,7 +232,7 @@ function updateResourceCount() {
     const pdfs = document.querySelectorAll('[data-type="pdf"]').length;
     const ppts = document.querySelectorAll('[data-type="ppt"]').length;
     const total = videos + pdfs + ppts;
-    
+
     console.log(`Total de recursos: ${total}`);
     console.log(`Videos: ${videos}, PDFs: ${pdfs}, Presentaciones: ${ppts}`);
 }
