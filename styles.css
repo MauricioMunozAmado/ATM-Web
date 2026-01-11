@@ -1,6 +1,151 @@
 /* ==========================================
-   ATMÓSFERA DE SEGURIDAD - STYLES.CSS
+   MODAL STYLES (Full Background Design)
    ========================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fondo más oscuro fuera del modal */
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    /* Fallback color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 16px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    animation: slideDown 0.4s ease forwards;
+    min-height: 500px;
+    /* Asegura altura suficiente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centrar contenido verticalmente */
+}
+
+/* Overlay oscuro sobre la imagen de fondo */
+.modal-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(22, 35, 50, 0.85);
+    /* Tinte azul oscuro intenso */
+    z-index: 1;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    color: var(--color-gold);
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    position: relative;
+    z-index: 2;
+    /* Encima del overlay */
+    padding: 40px 40px 20px;
+    background: transparent;
+    border: none;
+    text-align: center;
+}
+
+.modal-header h2 {
+    color: var(--color-gold);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgba(249, 221, 71, 0.3);
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.modal-body {
+    position: relative;
+    z-index: 2;
+    /* Encima del overlay */
+    padding: 20px 50px 50px;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.modal-body p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 90%;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+        min-height: auto;
+    }
+
+    .modal-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .modal-body {
+        padding: 20px 25px 40px;
+    }
+
+    .modal-body p {
+        font-size: 1rem;
+    }
+}
+
 
 :root {
     --color-ebony: #162332;
@@ -303,7 +448,7 @@ img {
     left: 0;
     width: 100%;
     height: 150px;
-    background: linear-gradient(to bottom, transparent 0%, #f8f9fa 105%);
+    background: linear-gradient(to bottom, transparent 0%, #f8f9fa 100%);
     pointer-events: none;
     z-index: 1;
 }
