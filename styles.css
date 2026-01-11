@@ -2296,13 +2296,91 @@ img {
 .training-thumbnail {
     width: 100%;
     height: 180px;
-    background: linear-gradient(135deg, #162332 0%, #1a2d3f 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 48px;
     position: relative;
+    overflow: hidden;
 }
+
+/* ==========================================
+   RESPONSIVE - SECCIONES ADICIONALES
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+
+    .policies-section,
+    .training-section,
+    .induction-section {
+        padding: 60px 15px 40px;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .policies-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .training-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tab-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        flex: 1 1 40%;
+        text-align: center;
+    }
+
+    /* Grids Responsivos Adicionales */
+    .certifications-grid,
+    .client-grid,
+    .indicators-grid {
+        grid-template-columns: 1fr !important;
+        /* Force single column on mobile */
+        gap: 30px;
+    }
+
+    /* Ajuste para Items de Inducción */
+    .induction-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        border-left: none;
+        border-top: 5px solid #162332;
+        /* Move accent to top */
+    }
+
+    .induction-item:hover {
+        transform: translateY(-5px);
+        /* Vertical movement instead of horizontal */
+        border-left-color: #162332;
+        /* Reset */
+        border-top-color: #F9DD47;
+    }
+
+    .induction-number {
+        margin: 0 auto;
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .induction-actions {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .action-btn {
+        flex: 1;
+    }
+}
+
 
 .play-icon {
     position: absolute;
