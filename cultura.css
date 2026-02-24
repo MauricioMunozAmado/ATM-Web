@@ -1,0 +1,530 @@
+/* ==========================================
+   NUESTRA CULTURA - ESTILOS PRINCIPALES
+   ========================================== */
+
+/* Variables locales */
+:root {
+    --color-gold: #ffcc00;
+    /* Ajustado para que resalte en el fondo oscuro */
+    --color-white: #ffffff;
+    --font-thick: 900;
+}
+
+/* HERO SECTION */
+.cultura-hero {
+    padding: 3rem 10% !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('images/Fondo/fondo negro.png') center/cover no-repeat !important;
+    min-height: 350px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.cultura-hero .container-aligned {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    gap: 4rem !important;
+}
+
+.hero-left {
+    flex: 1 !important;
+}
+
+.hero-right {
+    flex: 1.2 !important;
+}
+
+/* Tipografía del Título */
+.hero-title-main {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 0.8 !important;
+    /* Más apretado para que se vea como bloque */
+    margin: 0 !important;
+}
+
+.hero-title-main span {
+    font-size: 4.5rem !important;
+    /* Reducido un poco para mejor balance */
+    font-weight: 900 !important;
+    text-transform: none !important;
+    letter-spacing: -3px !important;
+    /* Más pegado como en la imagen */
+    white-space: nowrap !important;
+    /* Evitar que 'Cultura que' se rompa en dos líneas */
+}
+
+.hero-title-main .yellow-text {
+    color: #ffd700 !important;
+    /* Dorado ATM */
+    font-family: 'Arimo', sans-serif !important;
+}
+
+.hero-title-main .white-text {
+    color: #ffffff !important;
+    font-family: 'Arimo', sans-serif !important;
+}
+
+/* Descripción del Banner */
+.hero-description {
+    font-size: 1.3rem !important;
+    color: #ffffff !important;
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
+    text-align: left !important;
+    max-width: 500px !important;
+}
+
+/* GALLERY SECTION */
+.gallery-section {
+    padding: 2rem 5% !important;
+    /* Más agresivo */
+    background: url('images/Fondo/Fondo_blanco.jpg') center/cover no-repeat !important;
+}
+
+.gallery-title {
+    font-size: 1.5rem !important;
+    /* Más pequeño */
+    font-weight: 800 !important;
+    text-align: center !important;
+    max-width: 700px !important;
+    margin: 0 auto 2.5rem !important;
+    /* Menos espacio */
+    color: #333 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.3px !important;
+}
+
+.gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.2rem !important;
+    /* Más juntos */
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+}
+
+.galeria-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.8rem !important;
+}
+
+.galeria-card-container {
+    width: 100% !important;
+    transition: transform 0.3s ease !important;
+}
+
+.galeria-card-container:hover {
+    transform: translateY(-5px) !important;
+}
+
+.galeria-image-container {
+    position: relative !important;
+    width: 100% !important;
+    height: 280px !important;
+    /* Ajustado para mejor encuadre */
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+.galeria-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    /* Centrar para mejor visibilidad */
+}
+
+.gallery-label-pill {
+    position: absolute !important;
+    bottom: 8px !important;
+    /* Más pegado al borde */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background: #ffffff !important;
+    color: #111 !important;
+    padding: 4px 10px !important;
+    /* Más ajustado */
+    border-radius: 5px !important;
+    font-size: 0.7rem !important;
+    /* Muy pequeño para evitar desborde */
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1) !important;
+    text-align: center !important;
+    min-width: 110px !important;
+}
+
+.gallery-btn {
+    background: #ffd700 !important;
+    color: #111 !important;
+    border: none !important;
+    padding: 5px 15px !important;
+    border-radius: 4px !important;
+    font-size: 0.85rem !important;
+    font-weight: 800 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-transform: none !important;
+    width: fit-content !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.gallery-btn:hover {
+    background: #e6c200 !important;
+    transform: scale(1.05) !important;
+}
+
+/* STATS SECTION */
+.stats-section {
+    padding: 1.5rem 10% !important;
+    /* Más reducido */
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('images/Fondo/fondo negro.png') center/cover no-repeat !important;
+}
+
+.stats-grid {
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    /* Más compacto */
+    flex-wrap: wrap !important;
+}
+
+.stat-item {
+    text-align: center !important;
+    flex: 1 !important;
+    min-width: 150px !important;
+    /* Más compacto */
+}
+
+.stat-number {
+    display: block !important;
+    font-size: 3.5rem !important;
+    /* Más pequeño */
+    font-weight: 900 !important;
+    color: #ffd700 !important;
+    margin-bottom: 0.1rem !important;
+    line-height: 1 !important;
+}
+
+.stat-label {
+    color: #ffd700 !important;
+    /* Todo amarillo */
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    /* Un poco más pequeño */
+    text-transform: none !important;
+}
+
+/* WELLNESS IMAGE-ONLY SECTION */
+.wellness-image-section {
+    padding: 1.5rem 10% !important;
+    /* Minimal padding as requested */
+    background: #ffffff !important;
+    /* Pure white to blend with the image */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.wellness-full-image {
+    width: 100% !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+}
+
+.wellness-full-image img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05) !important;
+    border-radius: 8px !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .wellness-image-section {
+        padding: 1rem 5% !important;
+    }
+}
+
+/* BLOG SECTION - FINAL DARK ULTRA-COMPACT */
+.blog-section {
+    padding: 2rem 5% !important;
+    /* Minimized vertical padding and wider margins */
+    background: linear-gradient(rgba(10, 10, 15, 0.4), rgba(10, 10, 15, 0.4)),
+        url('images/Fondo/fondo negro.png') center/cover no-repeat !important;
+    color: #fff !important;
+}
+
+.blog-title {
+    font-size: 2.8rem !important;
+    /* Standardized compact title */
+    font-weight: 950 !important;
+    color: #ffd700 !important;
+    text-align: center !important;
+    margin-bottom: 0.2rem !important;
+    font-family: 'Montserrat', sans-serif !important;
+    letter-spacing: -1.5px !important;
+}
+
+.blog-intro {
+    text-align: center !important;
+    max-width: 1000px !important;
+    margin: 0 auto 1.5rem !important;
+    /* Extremely tight margin */
+    font-size: 1rem !important;
+    color: #dddddd !important;
+    line-height: 1.2 !important;
+}
+
+.blog-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+    max-width: 1500px !important;
+    /* Expanded horizontal adjustment */
+    margin: 0 auto !important;
+}
+
+.blog-card {
+    display: flex !important;
+    flex-direction: row !important;
+    background: transparent !important;
+    border-radius: 25px !important;
+    /* Tighter radius for smaller cards */
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    height: 225px !important;
+    /* Ultra-tight height for text fit */
+}
+
+.blog-photo {
+    flex: 0 0 40% !important;
+    height: 100% !important;
+}
+
+.blog-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+}
+
+.blog-content {
+    flex: 0 0 60% !important;
+    background: #ffffff !important;
+    padding: 0.8rem 1.5rem !important;
+    /* Minimal internal padding to fit text */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.blog-content h3 {
+    font-size: 1.6rem !important;
+    /* Precision scaling */
+    font-weight: 900 !important;
+    color: #000 !important;
+    margin-bottom: 0px !important;
+    line-height: 1 !important;
+}
+
+.blog-role {
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    color: #666 !important;
+    margin: 0.2rem 0 0.8rem 0 !important;
+    /* Tighter vertical space */
+    letter-spacing: 0.2px !important;
+}
+
+.blog-quote {
+    font-size: 0.95rem !important;
+    color: #222 !important;
+    line-height: 1.25 !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    text-align: justify !important;
+    /* Perfect high-fidelity justification */
+    width: 100% !important;
+    margin: 0 !important;
+    hyphens: auto;
+}
+
+/* ESPECÍFICO PARA LA SEGUNDA TARJETA (TEXTO MÁS LARGO) */
+.blog-grid .blog-card:nth-child(2) .blog-photo {
+    flex: 0 0 32% !important;
+    /* Extremely enlarged photo ratio */
+}
+
+.blog-grid .blog-card:nth-child(2) .blog-content {
+    flex: 0 0 48% !important;
+    /* Very narrow content ratio */
+    padding: 0.8rem 1rem !important;
+    /* Absolute minimal padding for narrowest space */
+}
+
+.blog-grid .blog-card:nth-child(2) .blog-content h3 {
+    font-size: 1.25rem !important;
+    /* Precision scaling for ultra-narrow area */
+}
+
+.blog-grid .blog-card:nth-child(2) .blog-role {
+    margin-bottom: 0.5rem !important;
+}
+
+.blog-grid .blog-card:nth-child(2) .blog-quote {
+    font-size: 0.72rem !important;
+    /* Ultra-tight scaling to maintain justification */
+    line-height: 1.12 !important;
+}
+
+/* RESPONSIVE BLOG */
+@media (max-width: 1200px) {
+    .blog-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-card {
+        flex-direction: column !important;
+        height: auto !important;
+        border-radius: 20px !important;
+    }
+
+    .blog-photo {
+        height: 250px !important;
+    }
+
+    .blog-title {
+        font-size: 2.8rem !important;
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .cultura-hero .container-aligned {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 2rem !important;
+    }
+
+    .hero-title-main span {
+        font-size: 3.5rem !important;
+    }
+
+    .hero-description {
+        text-align: center !important;
+        margin: 0 auto !important;
+        font-size: 1.1rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .cultura-hero {
+        padding: 4rem 5% !important;
+    }
+
+    .hero-title-main span {
+        font-size: 2.5rem !important;
+    }
+
+    .hero-description {
+        font-size: 1rem !important;
+    }
+}
+
+/* ==========================================
+   MODAL GALLERY REFINEMENT (2 Columns)
+   ========================================== */
+
+.modal {
+    display: none !important;
+    /* Asegurar que no interfiera si no está activo */
+    position: fixed;
+    z-index: 2100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.modal::-webkit-scrollbar {
+    display: none;
+}
+
+.modal.active {
+    display: block !important;
+}
+
+.modal-content.gallery-modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #888;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #ffd700;
+}
+
+#galleryTitle {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.gallery-display {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-thumb {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-thumb:hover {
+    transform: scale(1.02);
+}

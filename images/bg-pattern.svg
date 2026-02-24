@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+<defs>
+<pattern id="pattern" width="60" height="104" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
+    <!-- Base Color -->
+    <rect width="60" height="104" fill="#272727"/>
+    
+    <!-- Geometric Triangles/Diamonds creating a faceted look -->
+    <path d="M30 0L60 52L30 104L0 52Z" fill="#2c2c2c" />
+    <path d="M30 0L60 52H0Z" fill="#303030" opacity="0.5"/>
+    <path d="M30 104L0 52H60Z" fill="#1f1f1f" opacity="0.5"/>
+    
+    <!-- Seamless tessellation logic -->
+    <path d="M0 0L30 52V0H0Z" fill="#252525"/>
+    <path d="M60 0L30 52V0H60Z" fill="#252525"/>
+    
+    <path d="M0 104L30 52V104H0Z" fill="#222222"/>
+    <path d="M60 104L30 52V104H60Z" fill="#222222"/>
+</pattern>
+</defs>
+<rect width="100%" height="100%" fill="url(#pattern)"/>
+</svg>

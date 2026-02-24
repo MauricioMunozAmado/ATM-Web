@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Cultura - Atmósfera de Seguridad</title>
+
+    <meta name="description"
+        content="Nuestra cultura organizacional: Creemos que colaboradores motivados y estables garantizan un servicio confiable y de alta calidad.">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cultura.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/logo.png" alt="Atmósfera de Seguridad" class="logo-image">
+                <div class="logo-text"></div>
+            </div>
+
+            <!-- Enlaces de navegación (Desktop) -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                <li><a href="centro-de-aprendizaje.html">Centro de Aprendizaje</a></li>
+                <li><a href="atencion-al-usuario.html">Atención al Usuario</a></li>
+                <li><a href="nuestra-cultura.html">Nuestra Cultura</a></li>
+                <li><a href="trabaja-con-nosotros.html" style="font-weight: 800;">ATERA</a></li>
+            </ul>
+
+            <a href="trabaja-con-nosotros.html" class="cta-button">Trabaja con Nosotros</a>
+
+            <!-- Botón de menú hamburguesa (Móvil) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <!-- Menú móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html" class="mobile-link active">Inicio</a></li>
+                <li><a href="quienes-somos.html" class="mobile-link">¿Quiénes Somos?</a></li>
+                <li><a href="centro-de-aprendizaje.html" class="mobile-link">Centro de Aprendizaje</a></li>
+                <li><a href="atencion-al-usuario.html" class="mobile-link">Atención al Usuario</a></li>
+                <li><a href="nuestra-cultura.html" class="mobile-link">Nuestra Cultura</a></li>
+                <li><a href="trabaja-con-nosotros.html" class="mobile-link">ATERA</a></li>
+            </ul>
+            <div class="mobile-cta">
+                <a href="trabaja-con-nosotros.html" class="cta-button"
+                    style="display: block; text-align: center;">Trabaja con Nosotros</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO: Cultura que protege -->
+        <section class="cultura-hero">
+            <div class="container-aligned">
+                <div class="hero-left">
+                    <h1 class="hero-title-main">
+                        <span class="yellow-text">Cultura que</span>
+                        <span class="white-text">protege</span>
+                    </h1>
+                </div>
+                <div class="hero-right">
+                    <p class="hero-description">
+                        Creemos que colaboradores motivados y estables garantizan un servicio confiable, continuo y de
+                        alta calidad para nuestros clientes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Momentos y Escenarios (Galería) -->
+        <section class="gallery-section">
+            <div class="container-aligned">
+                <h2 class="gallery-title">Algunos momentos y escenarios que reflejan nuestro trabajo, compromiso y
+                    sentido humano.</h2>
+                <div class="gallery-grid">
+                    <!-- Card 1 -->
+                    <div class="galeria-item">
+                        <div class="galeria-card-container">
+                            <div class="galeria-image-container">
+                                <img src="images/IMG_7791.jpg" alt="Quinqueños 2025" class="galeria-image">
+                                <div class="gallery-label-pill">Quinqueños 2025</div>
+                            </div>
+                        </div>
+                        <button class="gallery-btn" onclick="openGalleryModal('evento1')">Ver Galeria</button>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="galeria-item">
+                        <div class="galeria-card-container">
+                            <div class="galeria-image-container">
+                                <img src="images/WhatsAppImage2025-12-11at10.57.27AM.jpeg" alt="Obsequios"
+                                    class="galeria-image">
+                                <div class="gallery-label-pill">Obsequios Fin de año 2025</div>
+                            </div>
+                        </div>
+                        <button class="gallery-btn" onclick="openGalleryModal('evento2')">Ver Galeria</button>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="galeria-item">
+                        <div class="galeria-card-container">
+                            <div class="galeria-image-container">
+                                <img src="images/WhatsApp Image 2026-01-26 at 16.44.30.jpeg" alt="Liderazgo"
+                                    class="galeria-image">
+                                <div class="gallery-label-pill">Construyendo Liderazgo</div>
+                            </div>
+                        </div>
+                        <button class="gallery-btn" onclick="openGalleryModal('evento3')">Ver Galeria</button>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="galeria-item">
+                        <div class="galeria-card-container">
+                            <div class="galeria-image-container">
+                                <img src="images/WhatsApp Image 2026-01-26 at 16.53.46.jpeg" alt="Campeones"
+                                    class="galeria-image">
+                                <div class="gallery-label-pill">Campeones de la Cultura ATM</div>
+                            </div>
+                        </div>
+                        <button class="gallery-btn" onclick="openGalleryModal('evento4')">Ver Galeria</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Modal -->
+        <div id="galleryModal" class="modal">
+            <div class="modal-content gallery-modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="galleryTitle">Galería de Eventos</h2>
+                <div class="gallery-display" id="galleryDisplay">
+                    <!-- Images will be injected here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN: Estadísticas (Fondo Oscuro) -->
+        <section class="stats-section stats-panel">
+            <div class="container-aligned">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number counter" data-target="95">95%</span>
+                        <p class="stat-label">Índice de satisfacción interna.</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">ALTA</span>
+                        <p class="stat-label">Estabilidad del equipo operativo.</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number counter" data-target="92">92%</span>
+                        <p class="stat-label">Tasa de renovación de servicios.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Estrategia de Bienestar (Versión Imagen para Fidelidad Total) -->
+        <section class="wellness-image-section">
+            <div class="container-aligned">
+                <div class="wellness-full-image">
+                    <img src="123.png" alt="Estrategia de Bienestar Infografía">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Blog ATM (Testimonios) -->
+        <section class="blog-section">
+            <div class="container-aligned">
+                <h2 class="blog-title">Blog ATM</h2>
+                <p class="blog-intro">Nuestro equipo gerencial lidera la organización con experiencia, compromiso y
+                    visión estratégica, orientando cada proceso hacia la excelencia, la confianza y el crecimiento
+                    sostenible de la compañía.</p>
+                <div class="blog-grid">
+                    <!-- Testimonio 1 -->
+                    <div class="blog-card">
+                        <div class="blog-photo">
+                            <img src="images/Don Juan C.png" alt="Juan Carlos Martín">
+                        </div>
+                        <div class="blog-content">
+                            <h3>Juan Carlos Martín</h3>
+                            <p class="blog-role">Gerente General - Representante Legal</p>
+                            <p class="blog-quote">"El verdadero crecimiento nace cuando transformamos los desafíos en
+                                oportunidades y los equipos en familias comprometidas con un propósito."</p>
+                        </div>
+                    </div>
+                    <!-- Testimonio 2 -->
+                    <div class="blog-card">
+                        <div class="blog-photo">
+                            <img src="images/Victor Villalba Pinzón.jpg" alt="Victor Villalba">
+                        </div>
+                        <div class="blog-content">
+                            <h3>Victor Villalba</h3>
+                            <p class="blog-role">Gerente Administrativo y financiero</p>
+                            <p class="blog-quote">"Atmósfera de seguridad no destaca por sí sola; destaca porque trabaja
+                                con personas íntegras, comprometidas y con propósito. Personas buenas que dan sentido a
+                                nuestro trabajo, que cuidan con el corazón y hacen de esta empresa una familia que
+                                inspira confianza."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (Standard) -->
+    <footer class="footer">
+        <div class="footer-header">
+            <h2>Contáctanos</h2>
+        </div>
+        <div class="footer-container">
+            <!-- Columna 1: Logo ATM -->
+            <div class="footer-logo-col">
+                <img src="images/logo.png" alt="Logo ATM" class="footer-logo-img">
+            </div>
+
+            <!-- Columna 2: Servicio al cliente -->
+            <div class="footer-column">
+                <h4>Servicio al cliente</h4>
+                <ul class="footer-list">
+                    <li><i class="far fa-envelope"></i> <a
+                            href="mailto:info@atmosferadeseguridad.com">info@atmosferadeseguridad.com</a></li>
+                    <li><i class="fas fa-phone-alt"></i> (601) 300 46 34</li>
+                    <li><i class="fas fa-mobile-alt"></i> +57 350 323 49 40</li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Correos Corporativos -->
+            <div class="footer-column">
+                <div class="footer-group">
+                    <h4>Comercial</h4>
+                    <ul class="footer-list">
+                        <li><i class="far fa-envelope"></i> <a
+                                href="mailto:Comercial@atmseguridadltda.com">Comercial@atmseguridadltda.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-group">
+                    <h4>Financiero</h4>
+                    <ul class="footer-list">
+                        <li><i class="far fa-envelope"></i> <a
+                                href="mailto:administrativo@atmseguridadltda.com">administrativo@atmseguridadltda.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-group">
+                    <h4>Gestión Humana</h4>
+                    <ul class="footer-list">
+                        <li><i class="far fa-envelope"></i> <a
+                                href="mailto:gestionhumana@atmseguridadltda.com">gestionhumana@atmseguridadltda.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Columna 4: Redes y Supervigilancia -->
+            <div class="footer-social-col">
+                <h4>Siguenos</h4>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="footer-super-box">
+                    <span class="footer-super-label">VIGILADO POR:</span>
+                    <div class="footer-super-logo-wrapper">
+                        <img src="images/06 super.png" alt="Supervigilancia" class="footer-super-logo-img">
+                        <div class="footer-super-flag"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

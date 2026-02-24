@@ -1,0 +1,1208 @@
+<<<<<<< HEAD
+/* Misión & Visión Section */
+.banner-about-custom {
+    background: url('images/banner-quienes-somos.png') center/100% 100% no-repeat !important;
+}
+
+.mission-vision-section {
+    padding: 1.5rem 1rem;
+    /* More compact */
+    background: #ffffff;
+    color: #333;
+}
+
+.mission-vision-container {
+    max-width: 1000px;
+    /* Reduced from 1200px */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    /* Image smaller than text column */
+    gap: 2rem;
+=======
+/* ==========================================
+   BANNER PRINCIPAL (QUIÉNES SOMOS)
+   ========================================== */
+
+.banner-horizontal-custom {
+    background-image: url('images/Fondo/fondo\ pagina.png') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding: 2.5rem 4%;
+    margin-top: -10px !important;
+    position: relative;
+    z-index: 20;
+}
+
+.banner-image-container {
+    position: relative;
+    width: 100%;
+    height: 22rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.7);
+}
+
+.banner-image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.banner-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.stacked-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.stacked-title span {
+    font-size: 3.8rem;
+    font-weight: 950;
+    line-height: 0.85;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    display: block;
+}
+
+.stacked-title .highlight-white {
+    color: white !important;
+}
+
+.stacked-title .highlight-yellow {
+    color: var(--color-gold);
+}
+
+/* ==========================================
+   MISIÓN & VISIÓN SECTION
+   ========================================== */
+
+.mission-vision-section {
+    padding: 2.5rem 4%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.97)),
+        url('images/Fondo/fondo pagina.png') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-vision-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 3.5rem;
+>>>>>>> 8131cdf (Actualización del proyecto)
+    align-items: center;
+}
+
+.mission-vision-content {
+    display: flex;
+    flex-direction: column;
+<<<<<<< HEAD
+    gap: 1.5rem;
+    /* Reduced from 2.5rem */
+}
+
+.mission-vision-item h2 {
+    color: var(--color-ebony);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+/* Removed bar before title */
+.mission-vision-item h2::before {
+    display: none;
+}
+
+.mission-vision-item p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+=======
+    gap: 2rem;
+}
+
+.mission-vision-item {
+    width: 100%;
+}
+
+.eyebrow-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 0.1rem;
+}
+
+.eyebrow-line {
+    width: 35px;
+    height: 3px;
+    background: var(--color-gold);
+}
+
+.eyebrow {
+    color: #444;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.mission-vision-item h2 {
+    color: #111;
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin-bottom: 0.1rem;
+    line-height: 1;
+    text-transform: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+.mission-vision-item p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+    /* Light gray for readability */
+    text-align: left;
+    margin: 0;
+}
+
+.mission-vision-image {
+    display: flex;
+    justify-content: center;
+>>>>>>> 8131cdf (Actualización del proyecto)
+}
+
+.mission-vision-image img {
+    width: 100%;
+    max-width: 380px;
+<<<<<<< HEAD
+    /* Force image smaller */
+    border-radius: 1.5rem;
+    /* Very rounded as in mockup */
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Stats Section */
+.stats-panel {
+    background: #1a1a1a;
+    padding: 2rem 1.5rem;
+    /* Reduced from 4rem */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+=======
+    margin: 0;
+    display: block;
+    border-radius: 30px;
+    box-shadow: 25px 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   STATS PANEL (INDICADORES)
+   ========================================== */
+
+.stats-panel {
+    background: #000;
+    padding: 1.2rem 4%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+>>>>>>> 8131cdf (Actualización del proyecto)
+}
+
+.stat-item h3 {
+    color: var(--color-gold);
+<<<<<<< HEAD
+    font-size: 2.2rem;
+    /* Shrunk from 3rem */
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+}
+
+.stat-item p {
+    color: #ccc;
+    font-size: 0.9rem;
+    /* Shrunk from 1.1rem */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Certificaciones Section */
+.certs-section {
+    padding: 3rem 1.5rem;
+    /* Reduced from 5rem */
+    background: #fdfdfd;
+    text-align: center;
+}
+
+.certs-section h2 {
+    font-size: 2rem;
+    /* Reduced from 2.5rem */
+    color: var(--color-ebony);
+    margin-bottom: 2rem;
+    /* Reduced from 3rem */
+}
+
+.certs-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* All in one row */
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.cert-logo {
+    background: white;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    /* Dark pronounced shadow */
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.cert-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.cert-logo img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    filter: none;
+    /* Keep original colors as requested by "fiel a la imagen" */
+    opacity: 1;
+    transition: transform 0.3s ease;
+}
+
+.cert-logo:hover img {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* Bogotá Highlight Section - Compact Fidelity */
+.bogota-highlight {
+    position: relative;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 1rem 0;
+    /* Reduced margin */
+    overflow: hidden;
+}
+
+.bogota-content-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    /* Compact padding */
+    z-index: 2;
+}
+
+.bogota-text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bogota-external-title {
+    color: var(--color-gold);
+    font-size: 2.8rem;
+    /* Smaller font */
+    font-weight: 900;
+    margin: 0.5rem 0 0 0;
+    /* Tighter gap */
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.bogota-text-block {
+    background: var(--color-gold);
+    padding: 1.5rem 1.5rem;
+    /* Compact block */
+    border-radius: 4px;
+    color: var(--color-ebony);
+}
+
+.bogota-text-block p {
+    font-size: 1.2rem;
+    /* Adjusted font */
+    line-height: 1.25;
+    font-weight: 700;
+    margin: 0;
+}
+
+.bogota-map-container {
+    flex: 1.2;
+    /* Slightly smaller map area */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-3d {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    filter: none;
+    /* Quitar efectos brillantes/sombras pesadas */
+}
+
+.marker {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--color-gold);
+    border: 2px solid #000;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    /* Bloqueado pero clicable para el modal */
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.marker:active {
+    cursor: grabbing;
+    transform: rotate(-45deg) scale(1.1);
+}
+
+/* Mini-Modal / Popup Estilo Tooltip */
+.marker-popup {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: var(--color-gold);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 110;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--color-gold);
+}
+
+.marker-popup::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--color-gold);
+}
+
+/* Posiciones exactas calibradas para Mapa.png */
+.pin-suba {
+    top: 15.5%;
+    left: 71.5%;
+}
+
+.pin-usaquen {
+    top: 22%;
+    left: 82.5%;
+}
+
+.pin-engativa {
+    top: 26.5%;
+    left: 60%;
+}
+
+.pin-barrios-unidos {
+    top: 30.5%;
+    left: 67%;
+}
+
+.pin-fontibon {
+    top: 28%;
+    left: 51%;
+}
+
+.pin-teusaquillo {
+    top: 35.5%;
+    left: 63%;
+}
+
+.pin-chapinero {
+    top: 33.5%;
+    left: 74.5%;
+}
+
+.pin-kennedy {
+    top: 37%;
+    left: 45%;
+}
+
+.pin-puente-aranda {
+    top: 40%;
+    left: 54.5%;
+}
+
+.pin-rafael-uribe {
+    top: 48%;
+    left: 51%;
+}
+
+.pin-ciudad-bolivar {
+    top: 62%;
+    left: 34.5%;
+}
+
+/* Testimonials Section - Compact High Fidelity */
+.testimonials-fidelity {
+    padding: 3rem 4% 5rem;
+    background: #ffffff;
+=======
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: -15px;
+}
+
+.stat-item p {
+    color: var(--color-gold);
+    font-size: 0.85rem;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 600;
+    max-width: 140px;
+}
+
+.certs-section {
+    padding: 3rem 4% 5rem;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.97)),
+        url('images/Fondo/fondo pagina.png') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
+}
+
+.certs-title {
+    font-size: 3.2rem;
+    color: #111;
+    font-weight: 900;
+    margin-bottom: 3.5rem;
+    line-height: 1;
+    font-family: 'Oswald', sans-serif;
+    text-transform: none;
+}
+
+.certs-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.certs-cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    /* Forced single line on desktop */
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow-x: auto;
+    /* Allow horizontal scroll if needed on smaller desktops */
+    padding: 1rem 0 2rem;
+}
+
+/* Hide scrollbar for a cleaner look while keeping functionality */
+.certs-cards-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.certs-cards-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.cert-card {
+    background: #ffffff;
+    padding: 0;
+    border-radius: 12px;
+    box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 160px;
+    /* Reduced to fit margins */
+    height: 160px;
+    /* Matching height for square look */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+    overflow: hidden;
+}
+
+.cert-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 18px 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.cert-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(1.15);
+    /* Base enlargement without resizing card */
+}
+
+.cert-card:hover img {
+    transform: scale(1.25);
+    /* Even larger on hover */
+}
+
+/* ==========================================
+   MAPA ESTRATÉGICO SECTION
+   ========================================== */
+
+.mapa-estrategico {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('images/Fondo/fondo negro.png') center/cover no-repeat;
+    padding: 1rem 0 0.5rem 0;
+    color: white;
+    overflow: hidden;
+}
+
+/* Redundant texture class removed */
+.mapa-geometric-bg {
+    display: none;
+}
+
+.mapa-title {
+    position: relative;
+    z-index: 2;
+    color: var(--color-gold);
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: none;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.mapa-container {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.mapa-text-card {
+    background: white;
+    backdrop-filter: blur(10px);
+    border: none;
+    color: #111;
+    padding: 3rem 2.5rem 3rem 4rem;
+    border-radius: 0 40px 40px 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    box-shadow: 20px 0 50px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.mapa-text-card b {
+    color: var(--color-ebony);
+    font-weight: 800;
+}
+
+.mapa-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    /* Increased map size */
+}
+
+.mapa-image {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 15px 30px rgba(255, 255, 255, 0.05));
+}
+
+/* Markers */
+.map-marker {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    z-index: 10;
+    pointer-events: all;
+}
+
+.marker-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--color-gold);
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(220, 185, 78, 0.4);
+    animation: markerPulse 2s infinite;
+}
+
+@keyframes markerPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 185, 78, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(220, 185, 78, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 185, 78, 0);
+    }
+}
+
+.marker-label {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 8px;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: scale(0.9);
+    cursor: text;
+}
+
+.map-marker:hover .marker-label {
+    opacity: 1;
+    transform: scale(1);
+    background: var(--color-gold);
+    color: #000;
+}
+
+.testimonials-fidelity {
+    padding: 2rem 4%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+        url('images/Fondo/fondo pagina.png') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+>>>>>>> 8131cdf (Actualización del proyecto)
+    text-align: center;
+}
+
+.fidelity-title {
+<<<<<<< HEAD
+    font-size: 2.8rem;
+    color: #111;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+    text-transform: none;
+    letter-spacing: -1px;
+=======
+    color: #222;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: none;
+>>>>>>> 8131cdf (Actualización del proyecto)
+}
+
+.fidelity-subtitle {
+    color: #555;
+<<<<<<< HEAD
+    margin-bottom: 3.5rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+=======
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+>>>>>>> 8131cdf (Actualización del proyecto)
+}
+
+.fidelity-grid {
+    display: grid;
+<<<<<<< HEAD
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.2rem;
+    max-width: 1450px;
+    margin: 0 auto;
+=======
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: left;
+>>>>>>> 8131cdf (Actualización del proyecto)
+}
+
+.fidelity-item {
+    display: flex;
+    flex-direction: column;
+<<<<<<< HEAD
+}
+
+.fidelity-card {
+    padding: 1.6rem 1.4rem;
+    border-radius: 10px;
+    position: relative;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    margin-bottom: 1.8rem;
+    transition: all 0.4s ease;
+}
+
+.fidelity-card:hover {
+    transform: translateY(-8px);
+}
+
+.card-dark {
+    background: #252525;
+=======
+    gap: 1rem;
+}
+
+.fidelity-card {
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-dark {
+    background-color: #1a2332;
+>>>>>>> 8131cdf (Actualización del proyecto)
+    color: white;
+}
+
+.card-light {
+<<<<<<< HEAD
+    background: white;
+    color: #252525;
+    border: 1px solid #f0f0f0;
+}
+
+.quote-icon {
+    color: var(--color-gold);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.card-text {
+    font-size: 1.05rem;
+    line-height: 1.35;
+    font-weight: 600;
+    margin: 0;
+    text-align: justify;
+=======
+    background-color: #ffffff;
+    color: #222;
+    border: 1px solid #eee;
+}
+
+.card-stars {
+    color: #f9dd47;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.card-recommends {
+    font-size: 0.85rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    flex: 1;
+    margin: 0 0 0.8rem 0;
+}
+
+.card-dark .card-text {
+    color: #ddd;
+}
+
+.card-light .card-text {
+    color: #333;
+}
+
+.quote-open,
+.quote-close {
+    color: #f9dd47;
+    font-size: 1rem;
+}
+
+.card-quote-top {
+    color: #f9dd47;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.card-quote-top.dark-quote {
+    color: #1a2332;
+}
+
+.card-badge {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card-social-icon {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.card-dark .card-social-icon {
+    color: #f9dd47;
+}
+
+.card-light .card-social-icon {
+    color: #1a2332;
+>>>>>>> 8131cdf (Actualización del proyecto)
+}
+
+.card-author {
+    display: flex;
+    align-items: center;
+<<<<<<< HEAD
+    gap: 10px;
+    padding-left: 0.4rem;
+=======
+    gap: 1.2rem;
+>>>>>>> 8131cdf (Actualización del proyecto)
+}
+
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+<<<<<<< HEAD
+    border: 3px solid #111;
+    object-fit: cover;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.author-info {
+    text-align: left;
+}
+
+.author-name {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #111;
+}
+
+.author-role {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 600;
+}
+
+/* Responsividad Testimonios Compactos */
+@media (max-width: 1100px) {
+    .fidelity-grid {
+        gap: 0.8rem;
+    }
+
+    .fidelity-card {
+        padding: 1.2rem 1rem;
+        min-height: 160px;
+    }
+}
+
+@media (max-width: 850px) {
+    .fidelity-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .fidelity-grid {
+        grid-template-columns: 1fr !important;
+=======
+    object-fit: cover;
+    border: 3px solid #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+.author-role {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* ==========================================
+   RESPONSIVIDAD
+   ========================================== */
+
+@media (max-width: 1200px) {
+    .fidelity-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    .certs-cards-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .stacked-title span {
+        font-size: 4rem;
+    }
+
+    .mission-vision-container,
+    .mapa-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .mission-vision-image,
+    .mapa-image-container {
+        order: -1;
+    }
+
+    .stats-panel {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .mission-vision-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .mapa-title {
+        white-space: normal;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-horizontal-custom {
+        padding: 2rem 4%;
+    }
+
+    .banner-image-container {
+        height: 16rem;
+    }
+
+    .stacked-title span {
+        font-size: 3.2rem;
+        letter-spacing: -1px;
+    }
+
+    .mission-vision-section {
+        padding: 2rem 4%;
+    }
+
+    .mission-vision-item h2 {
+        font-size: 2.4rem;
+    }
+
+    .certs-section {
+        padding: 2rem 4% 3rem;
+    }
+
+    .certs-title {
+        font-size: 2.2rem;
+    }
+
+    .certs-cards-grid {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .cert-card {
+        flex: 0 0 120px;
+        height: 120px;
+    }
+
+    .fidelity-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .fidelity-title {
+        font-size: 2rem;
+    }
+
+    .testimonials-fidelity {
+        padding: 2.5rem 4%;
+    }
+
+    .mapa-container {
+        grid-template-columns: 1fr;
+    }
+
+    .mapa-text-card {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner-horizontal-custom {
+        padding: 1.5rem 4%;
+    }
+
+    .banner-image-container {
+        height: 13rem;
+    }
+
+    .stacked-title span {
+        font-size: 2.6rem;
+        letter-spacing: -2px;
+    }
+
+    .stats-panel {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1.5rem 4%;
+    }
+
+    .stat-item h3 {
+        font-size: 2.2rem;
+    }
+
+    .mission-vision-container {
+        gap: 1.5rem;
+    }
+
+    .mission-vision-item h2 {
+        font-size: 2rem;
+    }
+
+    .fidelity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fidelity-card {
+        min-height: auto;
+    }
+
+    .certs-grid {
+        justify-content: center;
+    }
+
+    .cert-card {
+        flex: 0 0 100px;
+        height: 100px;
+    }
+
+    .mapa-estrategico {
+        padding: 3rem 4%;
+    }
+
+    .mapa-title {
+        font-size: 1.5rem;
+        white-space: normal;
+    }
+
+    .fidelity-title {
+        font-size: 1.7rem;
+    }
+
+    .fidelity-subtitle {
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .stacked-title span {
+        font-size: 2.2rem;
+    }
+
+    .stats-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .fidelity-grid {
+        grid-template-columns: 1fr;
+>>>>>>> 8131cdf (Actualización del proyecto)
+    }
+}

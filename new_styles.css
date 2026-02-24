@@ -1,0 +1,238 @@
+/* ==========================================
+   NUEVOS ESTILOS REDISEÑO INICIO
+   ========================================== */
+
+/* Contenedor Global para Alineación */
+.container-aligned {
+    max-width: 1400px;
+    /* Mismo que nav-container */
+    margin: 0 auto;
+    padding: 0 30px;
+    /* Mismo padding que nav-container */
+    width: 100%;
+}
+
+/* ==========================================
+   HEADER / NAV ACTUALIZACIONES
+   ========================================== */
+.highlight-button {
+    background-color: var(--color-gold);
+    color: var(--color-grey-dark);
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.highlight-button:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(249, 221, 71, 0.4);
+}
+
+/* ==========================================
+   NUEVO BANNER VIDEO + TEXTO
+   ========================================== */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    /* Altura ajustada para dar espacio al video y texto sin ser pantalla completa forzada */
+    min-height: 600px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 80px;
+    /* Compensar navbar fixed */
+}
+
+/* Fondo oscuro general por si el video no carga */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #05050a;
+    z-index: 0;
+}
+
+/* Grid del Banner */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    height: 100%;
+}
+
+/* Área del Video */
+.video-placeholder {
+    width: 100%;
+    height: 400px;
+    /* Altura fija para el área del video */
+    background: #111;
+    border: 1px dashed #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-placeholder video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Área de Texto */
+.hero-text-content {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.hero-title-main {
+    font-size: 5rem;
+    line-height: 0.9;
+    font-weight: 800;
+    color: var(--color-gold);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 0.9;
+}
+
+.hero-subtitle-small {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    margin-right: 4rem;
+    /* Ajuste visual para alinear "Con Calidad" sobre "Humana" */
+    font-style: italic;
+}
+
+.hero-subtitle-large {
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Responsive Banner */
+@media (max-width: 992px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .hero-text-content {
+        align-items: center;
+        text-align: center;
+        order: -1;
+        /* Texto primero en móvil */
+    }
+
+    .hero-subtitle-small {
+        margin-right: 0;
+    }
+
+    .video-placeholder {
+        height: 300px;
+    }
+
+    .hero-title-main {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle-large {
+        font-size: 3rem;
+    }
+}
+
+/* ==========================================
+   BARRA DE SERVICIOS (DOTS STRIP)
+   ========================================== */
+.services-strip {
+    background-color: #0a0a0a;
+    background-image: radial-gradient(#333 1px, transparent 1px);
+    background-size: 20px 20px;
+    /* Efecto de puntos */
+    padding: 3rem 0;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    position: relative;
+    z-index: 5;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    text-align: center;
+    align-items: start;
+}
+
+.service-item-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.service-item-strip:hover {
+    transform: translateY(-5px);
+}
+
+.service-title-strip {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+/* Iconos o Texto grande para servicios */
+.service-title-strip span {
+    display: block;
+    font-size: 2rem;
+    /* Tamaño grande para la primera letra o icono si se usa fuente */
+    color: var(--color-gold);
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Servicios */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
