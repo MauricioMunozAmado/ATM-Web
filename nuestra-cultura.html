@@ -1,18 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Cultura - Atmósfera de Seguridad</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="images/Logos/Logos-02.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/Logos/Logos-02.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="images/Logos/Logos-02.png">
 
-    <meta name="description"
-        content="Nuestra cultura organizacional: Creemos que colaboradores motivados y estables garantizan un servicio confiable y de alta calidad.">
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+
+
+    <link rel="stylesheet" href="styles.css?v=1.1">
     <link rel="stylesheet" href="cultura.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="fidelity.css?v=1.1">
 </head>
 
 <body>
@@ -21,18 +24,18 @@
         <div class="nav-container">
             <!-- Logo -->
             <div class="logo">
-                <img src="images/logo.png" alt="Atmósfera de Seguridad" class="logo-image">
+                <img src="images/Logos/logo.png" alt="Atmósfera de Seguridad" class="logo-image">
                 <div class="logo-text"></div>
             </div>
 
             <!-- Enlaces de navegación (Desktop) -->
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
                 <li><a href="centro-de-aprendizaje.html">Centro de Aprendizaje</a></li>
                 <li><a href="atencion-al-usuario.html">Atención al Usuario</a></li>
-                <li><a href="nuestra-cultura.html">Nuestra Cultura</a></li>
-                <li><a href="trabaja-con-nosotros.html" style="font-weight: 800;">ATERA</a></li>
+                <li><a href="nuestra-cultura.html" class="active">Nuestra Cultura</a></li>
+                <li><a href="#" onclick="openAteraModal(event)">Atera</a></li>
             </ul>
 
             <a href="trabaja-con-nosotros.html" class="cta-button">Trabaja con Nosotros</a>
@@ -48,12 +51,12 @@
         <!-- Menú móvil -->
         <div class="mobile-menu" id="mobileMenu">
             <ul>
-                <li><a href="index.html" class="mobile-link active">Inicio</a></li>
+                <li><a href="index.html" class="mobile-link">Inicio</a></li>
                 <li><a href="quienes-somos.html" class="mobile-link">¿Quiénes Somos?</a></li>
                 <li><a href="centro-de-aprendizaje.html" class="mobile-link">Centro de Aprendizaje</a></li>
                 <li><a href="atencion-al-usuario.html" class="mobile-link">Atención al Usuario</a></li>
-                <li><a href="nuestra-cultura.html" class="mobile-link">Nuestra Cultura</a></li>
-                <li><a href="trabaja-con-nosotros.html" class="mobile-link">ATERA</a></li>
+                <li><a href="nuestra-cultura.html" class="mobile-link active">Nuestra Cultura</a></li>
+                <li><a href="#" class="mobile-link">Atera</a></li>
             </ul>
             <div class="mobile-cta">
                 <a href="trabaja-con-nosotros.html" class="cta-button"
@@ -63,20 +66,22 @@
     </nav>
 
     <main>
-        <!-- HERO: Cultura que protege -->
         <section class="cultura-hero">
-            <div class="container-aligned">
-                <div class="hero-left">
-                    <h1 class="hero-title-main">
-                        <span class="yellow-text">Cultura que</span>
-                        <span class="white-text">protege</span>
-                    </h1>
-                </div>
-                <div class="hero-right">
-                    <p class="hero-description">
-                        Creemos que colaboradores motivados y estables garantizan un servicio confiable, continuo y de
-                        alta calidad para nuestros clientes.
-                    </p>
+            <div class="global-hero-card">
+                <div class="hero-container">
+                    <div class="hero-title-group">
+                        <h1 class="banner-title">
+                            <span class="text-yellow">Cultura que</span>
+                            <span class="text-white">protege</span>
+                        </h1>
+                    </div>
+                    <div class="hero-subtitle-group">
+                        <p class="hero-description">
+                            Creemos que colaboradores motivados y estables garantizan un servicio confiable, continuo y
+                            de
+                            alta calidad para nuestros clientes.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -95,7 +100,9 @@
                                 <div class="gallery-label-pill">Quinqueños 2025</div>
                             </div>
                         </div>
-                        <button class="gallery-btn" onclick="openGalleryModal('evento1')">Ver Galeria</button>
+                        <a href="https://atmosferadeseguridadltda.pixieset.com/quinquenios2025/" target="_blank"
+                            class="gallery-btn">Ver Galeria</a>
+
                     </div>
                     <!-- Card 2 -->
                     <div class="galeria-item">
@@ -106,7 +113,9 @@
                                 <div class="gallery-label-pill">Obsequios Fin de año 2025</div>
                             </div>
                         </div>
-                        <button class="gallery-btn" onclick="openGalleryModal('evento2')">Ver Galeria</button>
+                        <a href="https://atmosferadeseguridadltda.pixieset.com/regalosatm/" target="_blank"
+                            class="gallery-btn">Ver Galeria</a>
+
                     </div>
                     <!-- Card 3 -->
                     <div class="galeria-item">
@@ -165,14 +174,15 @@
             </div>
         </section>
 
-        <!-- SECCIÓN: Estrategia de Bienestar (Versión Imagen para Fidelidad Total) -->
+        <!-- SECCIÓN: Estrategia de Bienestar (Imagen Única - PANTALLA COMPLETA) -->
         <section class="wellness-image-section">
-            <div class="container-aligned">
-                <div class="wellness-full-image">
-                    <img src="123.png" alt="Estrategia de Bienestar Infografía">
-                </div>
-            </div>
+            <h2 class="wellness-title">Estrategia de Bienestar</h2>
+            <img src="images/Social Media Marketing Strategy Framework Infographic Presentation (1).png"
+                alt="Estrategia de Bienestar ATM" class="wellness-full-img-v2">
         </section>
+
+
+
 
         <!-- SECCIÓN: Blog ATM (Testimonios) -->
         <section class="blog-section">
@@ -202,8 +212,10 @@
                         <div class="blog-content">
                             <h3>Victor Villalba</h3>
                             <p class="blog-role">Gerente Administrativo y financiero</p>
-                            <p class="blog-quote">"Atmósfera de seguridad no destaca por sí sola; destaca porque trabaja
-                                con personas íntegras, comprometidas y con propósito. Personas buenas que dan sentido a
+                            <p class="blog-quote">"Atmósfera de seguridad no destaca por sí sola; destaca porque
+                                trabaja
+                                con personas íntegras, comprometidas y con propósito. Personas buenas que dan sentido
+                                a
                                 nuestro trabajo, que cuidan con el corazón y hacen de esta empresa una familia que
                                 inspira confianza."</p>
                         </div>
@@ -213,30 +225,45 @@
         </section>
     </main>
 
-    <!-- FOOTER (Standard) -->
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-header">
+        <div class="footer-er">
             <h2>Contáctanos</h2>
         </div>
         <div class="footer-container">
             <!-- Columna 1: Logo ATM -->
             <div class="footer-logo-col">
-                <img src="images/logo.png" alt="Logo ATM" class="footer-logo-img">
+                <img src="images/Logos/logo.png" alt="Logo ATM" class="footer-logo-img">
             </div>
 
-            <!-- Columna 2: Servicio al cliente -->
-            <div class="footer-column">
-                <h4>Servicio al cliente</h4>
-                <ul class="footer-list">
-                    <li><i class="far fa-envelope"></i> <a
-                            href="mailto:info@atmosferadeseguridad.com">info@atmosferadeseguridad.com</a></li>
-                    <li><i class="fas fa-phone-alt"></i> (601) 300 46 34</li>
-                    <li><i class="fas fa-mobile-alt"></i> +57 350 323 49 40</li>
-                </ul>
+            <!-- Columna 2: Servicio al cliente + Siguenos + Supervigilancia -->
+            <div class="footer-column footer-left-aligned">
+                <div class="footer-group">
+                    <h4>Servicio al cliente</h4>
+                    <ul class="footer-list">
+                        <li><i class="far fa-envelope"></i> <a
+                                href="mailto:info@atmosferadeseguridad.com">info@atmosferadeseguridad.com</a></li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+576013004634">(601) 300 46 34</a></li>
+                        <li><i class="fas fa-mobile-alt"></i> <a href="tel:+573503234940">+57 350 323 49 40</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-group footer-integrated-group">
+                    <h4>Siguenos</h4>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/AtmosferadeSeguridad" aria-label="Facebook" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/atmosferadeseguridad/" aria-label="Instagram" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@atmsfera.de.segur?_r=1&_t=ZS-94OLKPOkWPM" aria-label="TikTok"
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
 
             <!-- Columna 3: Correos Corporativos -->
-            <div class="footer-column">
+            <div class="footer-column footer-left-aligned">
                 <div class="footer-group">
                     <h4>Comercial</h4>
                     <ul class="footer-list">
@@ -261,17 +288,9 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- Columna 4: Redes y Supervigilancia -->
-            <div class="footer-social-col">
-                <h4>Siguenos</h4>
-                <div class="footer-socials">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="footer-super-box">
+            <!-- Columna 4: Vigilado Por (Derecha) -->
+            <div class="footer-column footer-right-col">
+                <div class="footer-super-box-integrated">
                     <span class="footer-super-label">VIGILADO POR:</span>
                     <div class="footer-super-logo-wrapper">
                         <img src="images/06 super.png" alt="Supervigilancia" class="footer-super-logo-img">
@@ -281,6 +300,19 @@
             </div>
         </div>
     </footer>
+
+    <!-- ATERA MODAL -->
+    <div id="ateraModal" class="atera-modal">
+        <div class="atera-modal-content">
+            <span class="atera-close" onclick="closeAteraModal()">&times;</span>
+            <div class="atera-modal-bg"></div>
+            <div class="atera-modal-body">
+                <h2>Próximamente: ATERA</h2>
+                <p>Muy pronto presentaremos una nueva forma de entender la seguridad.</p>
+                <p class="atera-highlight">ATERA está por comenzar una nueva era en la gestión de seguridad.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

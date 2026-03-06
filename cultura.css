@@ -1,5 +1,8 @@
-/* ==========================================
-   NUESTRA CULTURA - ESTILOS PRINCIPALES
+main {
+    background-color: #05050a !important;
+}
+
+/* ===================================   NUESTRA CULTURA - ESTILOS PRINCIPALES
    ========================================== */
 
 /* Variables locales */
@@ -12,78 +15,60 @@
 
 /* HERO SECTION */
 .cultura-hero {
-    padding: 3rem 10% !important;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url('images/Fondo/fondo negro.png') center/cover no-repeat !important;
-    min-height: 350px !important;
-    display: flex !important;
-    align-items: center !important;
+    padding: 0;
+    overflow: hidden;
+    background: url(images/Fondo/fondo-negro.png) center/cover no-repeat;
 }
 
-.cultura-hero .container-aligned {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100% !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    gap: 4rem !important;
+
+
+
+.cultura-hero .global-hero-card {
+    margin: 1rem auto 1rem;
+    /* Compact margins to match learning center */
 }
 
-.hero-left {
-    flex: 1 !important;
+@media (min-width: 768px) {
+    .cultura-hero .global-hero-card {
+        margin: 1.5rem auto 1.5rem;
+    }
 }
 
-.hero-right {
-    flex: 1.2 !important;
+.hero-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
 }
 
-/* Tipografía del Título */
-.hero-title-main {
-    display: flex !important;
-    flex-direction: column !important;
-    line-height: 0.8 !important;
-    /* Más apretado para que se vea como bloque */
-    margin: 0 !important;
+.hero-title-group {
+    flex: 0 0 auto;
 }
 
-.hero-title-main span {
-    font-size: 4.5rem !important;
-    /* Reducido un poco para mejor balance */
-    font-weight: 900 !important;
-    text-transform: none !important;
-    letter-spacing: -3px !important;
-    /* Más pegado como en la imagen */
-    white-space: nowrap !important;
-    /* Evitar que 'Cultura que' se rompa en dos líneas */
+.hero-subtitle-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 380px;
 }
 
-.hero-title-main .yellow-text {
-    color: #ffd700 !important;
-    /* Dorado ATM */
-    font-family: 'Arimo', sans-serif !important;
-}
-
-.hero-title-main .white-text {
-    color: #ffffff !important;
-    font-family: 'Arimo', sans-serif !important;
-}
-
-/* Descripción del Banner */
 .hero-description {
-    font-size: 1.3rem !important;
-    color: #ffffff !important;
-    line-height: 1.5 !important;
-    font-weight: 400 !important;
-    text-align: left !important;
-    max-width: 500px !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f3f4f6;
+    text-align: justify;
+    margin: 0;
 }
 
 /* GALLERY SECTION */
 .gallery-section {
     padding: 2rem 5% !important;
     /* Más agresivo */
-    background: url('images/Fondo/Fondo_blanco.jpg') center/cover no-repeat !important;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('images/Fondo/fondo-blanco.jpg') center/cover no-repeat !important;
 }
 
 .gallery-title {
@@ -163,6 +148,8 @@
 }
 
 .gallery-btn {
+    display: inline-block !important;
+    text-decoration: none !important;
     background: #ffd700 !important;
     color: #111 !important;
     border: none !important;
@@ -177,6 +164,7 @@
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05) !important;
 }
 
+
 .gallery-btn:hover {
     background: #e6c200 !important;
     transform: scale(1.05) !important;
@@ -186,8 +174,7 @@
 .stats-section {
     padding: 1.5rem 10% !important;
     /* Más reducido */
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url('images/Fondo/fondo negro.png') center/cover no-repeat !important;
+    background: #05050a !important;
 }
 
 .stats-grid {
@@ -225,44 +212,53 @@
     text-transform: none !important;
 }
 
-/* WELLNESS IMAGE-ONLY SECTION */
+/* WELLNESS IMAGE-ONLY SECTION - TRUE FULL WIDTH RESET */
+
 .wellness-image-section {
-    padding: 1.5rem 10% !important;
-    /* Minimal padding as requested */
-    background: #ffffff !important;
-    /* Pure white to blend with the image */
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-
-.wellness-full-image {
     width: 100% !important;
-    max-width: 1400px !important;
-    margin: 0 auto !important;
+    max-width: none !important;
+    padding: 3rem 0 0 0 !important;
+    /* Top padding for title */
+    margin: 0 !important;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('images/Fondo/fondo-blanco.jpg') center/cover no-repeat !important;
+    display: block !important;
 }
 
-.wellness-full-image img {
+.wellness-title {
+    font-size: 2.8rem !important;
+    font-weight: 950 !important;
+    color: #111 !important;
+    /* Dark for white background */
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    font-family: 'Montserrat', sans-serif !important;
+    letter-spacing: -1.5px !important;
+}
+
+.wellness-full-img-v2 {
     width: 100% !important;
     height: auto !important;
     display: block !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05) !important;
-    border-radius: 8px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
 }
 
+
+
+
+
+
+
 /* RESPONSIVE */
-@media (max-width: 768px) {
-    .wellness-image-section {
-        padding: 1rem 5% !important;
-    }
-}
+@media (max-width: 768px) {}
 
 /* BLOG SECTION - FINAL DARK ULTRA-COMPACT */
 .blog-section {
     padding: 2rem 5% !important;
     /* Minimized vertical padding and wider margins */
-    background: linear-gradient(rgba(10, 10, 15, 0.4), rgba(10, 10, 15, 0.4)),
-        url('images/Fondo/fondo negro.png') center/cover no-repeat !important;
+    background: url(images/Fondo/fondo-negro.png) center/cover no-repeat !important;
     color: #fff !important;
 }
 
@@ -362,23 +358,7 @@
     hyphens: auto;
 }
 
-/* ESPECÍFICO PARA LA SEGUNDA TARJETA (TEXTO MÁS LARGO) */
-.blog-grid .blog-card:nth-child(2) .blog-photo {
-    flex: 0 0 32% !important;
-    /* Extremely enlarged photo ratio */
-}
 
-.blog-grid .blog-card:nth-child(2) .blog-content {
-    flex: 0 0 48% !important;
-    /* Very narrow content ratio */
-    padding: 0.8rem 1rem !important;
-    /* Absolute minimal padding for narrowest space */
-}
-
-.blog-grid .blog-card:nth-child(2) .blog-content h3 {
-    font-size: 1.25rem !important;
-    /* Precision scaling for ultra-narrow area */
-}
 
 .blog-grid .blog-card:nth-child(2) .blog-role {
     margin-bottom: 0.5rem !important;
@@ -414,41 +394,20 @@
     }
 }
 
-/* RESPONSIVE */
 @media (max-width: 992px) {
-    .cultura-hero .container-aligned {
-        flex-direction: column !important;
-        text-align: center !important;
-        gap: 2rem !important;
-    }
-
-    .hero-title-main span {
-        font-size: 3.5rem !important;
-    }
-
     .hero-description {
-        text-align: center !important;
         margin: 0 auto !important;
-        font-size: 1.1rem !important;
+        text-align: center !important;
     }
 }
 
 @media (max-width: 576px) {
     .cultura-hero {
-        padding: 4rem 5% !important;
-    }
-
-    .hero-title-main span {
-        font-size: 2.5rem !important;
-    }
-
-    .hero-description {
-        font-size: 1rem !important;
+        padding: 0 !important;
     }
 }
 
-/* ==========================================
-   MODAL GALLERY REFINEMENT (2 Columns)
+/* ===================================   MODAL GALLERY REFINEMENT (2 Columns)
    ========================================== */
 
 .modal {

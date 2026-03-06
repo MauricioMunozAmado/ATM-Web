@@ -1,13 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atmósfera de Seguridad</title>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Oswald:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Centro de Aprendizaje - Atmósfera de Seguridad</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="images/Logos/Logos-02.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/Logos/Logos-02.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="images/Logos/Logos-02.png">
+
+
+
+    <link rel="stylesheet" href="styles.css?v=1.1">
     <link rel="stylesheet" href="aprendizaje.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -18,7 +23,7 @@
         <div class="nav-container">
             <!-- Logo -->
             <div class="logo">
-                <img src="images/logo.png" alt="Atmósfera de Seguridad" class="logo-image">
+                <img src="images/Logos/logo.png" alt="Atmósfera de Seguridad" class="logo-image">
                 <div class="logo-text"></div>
             </div>
 
@@ -26,23 +31,13 @@
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
-<<<<<<< HEAD
                 <li><a href="centro-de-aprendizaje.html" class="active">Centro de Aprendizaje</a></li>
                 <li><a href="atencion-al-usuario.html">Atención al Usuario</a></li>
-                <li><a href="beneficios-atm.html">Beneficios ATM</a></li>
-                <li><a href="trabaja-con-nosotros.html">ATERA</a></li>
-            </ul>
-
-            <a href="index.html#atencion-usuario" class="cta-button">Contáctanos</a>
-=======
-                <li><a href="centro-de-aprendizaje.html">Centro de Aprendizaje</a></li>
-                <li><a href="atencion-al-usuario.html">Atención al Usuario</a></li>
                 <li><a href="nuestra-cultura.html">Nuestra Cultura</a></li>
-                <li><a href="trabaja-con-nosotros.html" style="font-weight: 800;">ATERA</a></li>
+                <li><a href="#" onclick="openAteraModal(event)">Atera</a></li>
             </ul>
 
             <a href="trabaja-con-nosotros.html" class="cta-button">Trabaja con Nosotros</a>
->>>>>>> 8131cdf (Actualización del proyecto)
 
             <!-- Botón de menú hamburguesa (Móvil) -->
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
@@ -55,29 +50,16 @@
         <!-- Menú móvil -->
         <div class="mobile-menu" id="mobileMenu">
             <ul>
-<<<<<<< HEAD
                 <li><a href="index.html" class="mobile-link">Inicio</a></li>
                 <li><a href="quienes-somos.html" class="mobile-link">¿Quiénes Somos?</a></li>
                 <li><a href="centro-de-aprendizaje.html" class="mobile-link active">Centro de Aprendizaje</a></li>
                 <li><a href="atencion-al-usuario.html" class="mobile-link">Atención al Usuario</a></li>
-                <li><a href="trabaja-con-nosotros.html" class="mobile-link">Trabaja con Nosotros</a></li>
-                <li><a href="beneficios-atm.html" class="mobile-link">Beneficios ATM</a></li>
-            </ul>
-            <div class="mobile-cta">
-                <a href="index.html#atencion-usuario" class="cta-button"
-                    style="display: block; text-align: center;">Contáctanos</a>
-=======
-                <li><a href="index.html" class="mobile-link active">Inicio</a></li>
-                <li><a href="quienes-somos.html" class="mobile-link">¿Quiénes Somos?</a></li>
-                <li><a href="centro-de-aprendizaje.html" class="mobile-link">Centro de Aprendizaje</a></li>
-                <li><a href="atencion-al-usuario.html" class="mobile-link">Atención al Usuario</a></li>
                 <li><a href="nuestra-cultura.html" class="mobile-link">Nuestra Cultura</a></li>
-                <li><a href="trabaja-con-nosotros.html" class="mobile-link">ATERA</a></li>
+                <li><a href="#" class="mobile-link">Atera</a></li>
             </ul>
             <div class="mobile-cta">
                 <a href="trabaja-con-nosotros.html" class="cta-button"
                     style="display: block; text-align: center;">Trabaja con Nosotros</a>
->>>>>>> 8131cdf (Actualización del proyecto)
             </div>
         </div>
     </nav>
@@ -85,193 +67,31 @@
     <main class="page-content">
         <!-- HERO: Políticas ATM -->
         <section class="learning-hero">
-<<<<<<< HEAD
-            <div class="hero-title-group">
-                <h1><span>Políticas</span> ATM</h1>
-            </div>
-            <div class="hero-subtitle-group">
-                <p class="hero-description">En nuestra empresa, las políticas establecen los lineamientos que orientan
-                    nuestras acciones y decisiones, garantizando el cumplimiento normativo, la transparencia, la calidad
-                    del servicio y el compromiso con nuestros clientes. Estas políticas reflejan nuestros valores
-                    corporativos y definen las buenas prácticas que rigen el comportamiento de nuestros colaboradores,
-                    promoviendo un entorno de trabajo responsable, ético y seguro.</p>
-            </div>
-        </section>
+            <div class="global-hero-card">
+                <div class="hero-container">
+                    <div class="hero-title-group">
+                        <h1 class="banner-title">
+                            <span class="text-yellow">Políticas</span>
+                            <span class="text-white">ATM</span>
+                        </h1>
+                    </div>
+                    <div class="hero-subtitle-group">
+                        <p class="hero-description">En nuestra empresa, las políticas establecen los lineamientos que
+                            orientan
+                            nuestras acciones y decisiones, garantizando el cumplimiento normativo, la transparencia, la
+                            calidad
+                            del servicio y el compromiso con nuestros clientes. Estas políticas reflejan nuestros
+                            valores
+                            corporativos y definen las buenas prácticas que rigen el comportamiento de nuestros
+                            colaboradores,
+                            promoviendo un entorno de trabajo responsable, ético y seguro.</p>
 
-        <!-- SECCIÓN: Grilla de Políticas -->
-        <section class="policies-grid-section">
-            <div class="policies-grid">
-                <!-- 1: Atención al Cliente -->
-                <div class="policy-item">
-                    <div class="policy-icon-circle"><i class="fas fa-users-cog"></i></div>
-                    <h3>Atención al Cliente</h3>
-                    <a href="Politicas/ATENCION_CLIENTE.pdf" class="download-pdf-link" download>Descargar PDF →</a>
-                </div>
-
-                <!-- 2: Objetivos Estratégicos -->
-                <div class="policy-item">
-                    <div class="policy-icon-circle"><i class="fas fa-bullseye"></i></div>
-                    <h3>Objetivos estratégicos</h3>
-                    <a href="Politicas/OBJETIVOS ESTRATEGICOS 2024.pdf" class="download-pdf-link" download>Descargar PDF
-                        →</a>
-                </div>
-
-                <!-- 3: Tratamiento de Datos -->
-                <div class="policy-item">
-                    <div class="policy-icon-circle"><i class="fas fa-database"></i></div>
-                    <h3>Política de Tratamiento de Datos</h3>
-                    <a href="Politicas/13. POLITICA TRATAMIENTO DE DATOS.pdf" class="download-pdf-link"
-                        download>Descargar PDF →</a>
-                </div>
-
-                <!-- 4: Prevención LAFTFP -->
-                <div class="policy-item">
-                    <div class="policy-icon-circle"><i class="fas fa-hand-holding-usd"></i></div>
-                    <h3>Política de Prevención de Riesgos LAFTFP</h3>
-                    <a href="Politicas/12. POLITICA DE PREVENCION DE RIESGOS LAFTFP.pdf" class="download-pdf-link"
-                        download>Descargar PDF →</a>
-                </div>
-
-                <!-- 5: Política Adicciones -->
-                <div class="policy-item">
-                    <div class="policy-icon-circle"><i class="fas fa-ban"></i></div>
-                    <h3>Política de Adicciones</h3>
-                    <a href="Politicas/politica de adicciones 2025.pdf" class="download-pdf-link" download>Descargar PDF
-                        →</a>
-                </div>
-
-                <!-- 6: Código Ética -->
-                <div class="policy-item">
-                    <div class="policy-icon-circle"><i class="fas fa-balance-scale"></i></div>
-                    <h3>Código de Ética</h3>
-                    <a href="Politicas/12. CODIGO DE ETICA_2024.pdf" class="download-pdf-link" download>Descargar PDF
-                        →</a>
-                </div>
-
-                <!-- 7: Política Derechos Humanos -->
-                <div class="policy-item">
-                    <div class="policy-icon-circle"><i class="fas fa-gavel"></i></div>
-                    <h3>Política de Derechos Humanos</h3>
-                    <a href="Politicas/10. POLITICA DERECHOS HUMANOS.pdf" class="download-pdf-link" download>Descargar
-                        PDF →</a>
-                </div>
-
-                <!-- 8: Prevención Riesgo Público -->
-                <div class="policy-item">
-                    <div class="policy-icon-circle"><i class="fas fa-user-shield"></i></div>
-                    <h3>Política de Prevención del Riesgo Público</h3>
-                    <a href="Politicas/7. POLITICA DE PREVENCION DEL RIESGO PUBLICO.pdf" class="download-pdf-link"
-                        download>Descargar PDF →</a>
-                </div>
-
-                <!-- 9: Declaración Conformidad -->
-                <div class="policy-item">
-                    <div class="policy-icon-circle"><i class="fas fa-file-contract"></i></div>
-                    <h3>Declaración de Conformidad</h3>
-                    <a href="Politicas/DECLARACIÓN DE CONFORMIDAD.pdf" class="download-pdf-link" download>Descargar PDF
-                        →</a>
-                </div>
-
-                <!-- 10: Política del Delator -->
-                <div class="policy-item">
-                    <div class="policy-icon-circle"><i class="fas fa-user-secret"></i></div>
-                    <h3>Política del Delator</h3>
-                    <a href="Politicas/11. POLITICA DEL DELATOR.pdf" class="download-pdf-link" download>Descargar PDF
-                        →</a>
-                </div>
-
-                <!-- 11: Desconexión Laboral -->
-                <div class="policy-item">
-                    <div class="policy-icon-circle"><i class="fas fa-mobile-alt-slash"></i></div>
-                    <h3>Política de Desconexión Laboral</h3>
-                    <a href="Politicas/10. POLITICA DE DE DESCONEXION LABORAL 2023.pdf" class="download-pdf-link"
-                        download>Descargar PDF →</a>
-                </div>
-
-                <!-- 12: Sistema Integrado Gestión -->
-                <div class="policy-item">
-                    <div class="policy-icon-circle"><i class="fas fa-project-diagram"></i></div>
-                    <h3>Política Sistema Integrado de Gestión</h3>
-                    <a href="Politicas/4. POLITICA SISTEMA INTEGRADO DE GESTION.pdf" class="download-pdf-link"
-                        download>Descargar PDF →</a>
-=======
-            <div class="hero-container">
-                <div class="hero-title-group">
-                    <h1><span>Políticas</span> ATM</h1>
-                </div>
-                <div class="hero-subtitle-group">
-                    <p class="hero-description">En nuestra empresa, las políticas establecen los lineamientos que
-                        orientan
-                        nuestras acciones y decisiones, garantizando el cumplimiento normativo, la transparencia, la
-                        calidad
-                        del servicio y el compromiso con nuestros clientes. Estas políticas reflejan nuestros valores
-                        corporativos y definen las buenas prácticas que rigen el comportamiento de nuestros
-                        colaboradores,
-                        promoviendo un entorno de trabajo responsable, ético y seguro.</p>
->>>>>>> 8131cdf (Actualización del proyecto)
+                    </div>
                 </div>
             </div>
         </section>
 
-<<<<<<< HEAD
-        <!-- SECCIÓN: Capacitaciones -->
-        <section class="training-section">
-            <h2 class="training-title">Capacitaciones</h2>
-            <p class="training-subtitle">Nuestras capacitaciones están diseñadas para fortalecer las competencias de
-                nuestro equipo, promoviendo el conocimiento, la actualización constante y la correcta aplicación de los
-                procedimientos, con el fin de garantizar un servicio eficiente, seguro y de alta calidad.</p>
 
-            <div class="training-grid">
-                <!-- Modulo 1 -->
-                <div class="training-module">
-                    <article class="module-card-body">
-                        <div class="ppt-icon-box"><i class="fas fa-file-powerpoint"></i></div>
-                        <span class="card-tag">PPT</span>
-                        <h4>Atención al Cliente</h4>
-                        <p>Compromiso con la excelencia y mejores prácticas internacionales de servicio.</p>
-                        <a href="#" class="download-slides-btn">Descargar 30 Slides</a>
-                    </article>
-                    <div class="module-footer-label">Modulo 1</div>
-                </div>
-
-                <!-- Modulo 2 -->
-                <div class="training-module">
-                    <article class="module-card-body">
-                        <div class="ppt-icon-box"><i class="fas fa-file-powerpoint"></i></div>
-                        <span class="card-tag">PPT</span>
-                        <h4>Atención al Cliente</h4>
-                        <p>Compromiso con la excelencia y mejores prácticas internacionales de servicio.</p>
-                        <a href="#" class="download-slides-btn">Descargar 30 Slides</a>
-                    </article>
-                    <div class="module-footer-label">Modulo 1</div>
-                </div>
-
-                <!-- Modulo 3 -->
-                <div class="training-module">
-                    <article class="module-card-body">
-                        <div class="ppt-icon-box"><i class="fas fa-file-powerpoint"></i></div>
-                        <span class="card-tag">PPT</span>
-                        <h4>Atención al Cliente</h4>
-                        <p>Compromiso con la excelencia y mejores prácticas internacionales de servicio.</p>
-                        <a href="#" class="download-slides-btn">Descargar 30 Slides</a>
-                    </article>
-                    <div class="module-footer-label">Modulo 1</div>
-                </div>
-
-                <!-- Modulo 4 -->
-                <div class="training-module">
-                    <article class="module-card-body">
-                        <div class="ppt-icon-box"><i class="fas fa-file-powerpoint"></i></div>
-                        <span class="card-tag">PPT</span>
-                        <h4>Atención al Cliente</h4>
-                        <p>Compromiso con la excelencia y mejores prácticas internacionales de servicio.</p>
-                        <a href="#" class="download-slides-btn">Descargar 30 Slides</a>
-                    </article>
-                    <div class="module-footer-label">Modulo 1</div>
-                </div>
-            </div>
-        </section>
-=======
         <!-- SECCIÓN: Grilla de Políticas -->
         <section class="policies-grid-section">
             <div class="policies-grid">
@@ -280,7 +100,8 @@
                     <div class="policy-icon-circle"><i class="fas fa-users-cog"></i></div>
                     <div class="policy-text">
                         <h3>Atención al Cliente</h3>
-                        <a href="Politicas/ATENCION_CLIENTE.pdf" class="download-pdf-link" download>Descargar PDF →</a>
+                        <a href="Politicas/ATENCION_CLIENTE.pdf" class="download-pdf-link" target="_blank"
+                            download>Descargar PDF →</a>
                     </div>
                 </div>
 
@@ -289,8 +110,8 @@
                     <div class="policy-icon-circle"><i class="fas fa-bullseye"></i></div>
                     <div class="policy-text">
                         <h3>Objetivos estratégicos</h3>
-                        <a href="Politicas/OBJETIVOS ESTRATEGICOS 2024.pdf" class="download-pdf-link" download>Descargar
-                            PDF →</a>
+                        <a href="Politicas/OBJETIVOS%20ESTRATEGICOS%202024.pdf" class="download-pdf-link"
+                            target="_blank" download>Descargar PDF →</a>
                     </div>
                 </div>
 
@@ -299,8 +120,8 @@
                     <div class="policy-icon-circle"><i class="fas fa-database"></i></div>
                     <div class="policy-text">
                         <h3>Política de Tratamiento de Datos</h3>
-                        <a href="Politicas/13. POLITICA TRATAMIENTO DE DATOS.pdf" class="download-pdf-link"
-                            download>Descargar PDF →</a>
+                        <a href="Politicas/13.%20POLITICA%20TRATAMIENTO%20DE%20DATOS.pdf" class="download-pdf-link"
+                            target="_blank" download>Descargar PDF →</a>
                     </div>
                 </div>
 
@@ -309,8 +130,8 @@
                     <div class="policy-icon-circle"><i class="fas fa-hand-holding-usd"></i></div>
                     <div class="policy-text">
                         <h3>Política de Prevención de Riesgos LAFTFP</h3>
-                        <a href="Politicas/12. POLITICA DE PREVENCION DE RIESGOS LAFTFP.pdf" class="download-pdf-link"
-                            download>Descargar PDF →</a>
+                        <a href="Politicas/12.%20POLITICA%20DE%20PREVENCION%20DE%20RIESGOS%20LAFTFP.pdf"
+                            class="download-pdf-link" target="_blank" download>Descargar PDF →</a>
                     </div>
                 </div>
 
@@ -319,8 +140,8 @@
                     <div class="policy-icon-circle"><i class="fas fa-ban"></i></div>
                     <div class="policy-text">
                         <h3>Política de Adicciones</h3>
-                        <a href="Politicas/politica de adicciones 2025.pdf" class="download-pdf-link" download>Descargar
-                            PDF →</a>
+                        <a href="Politicas/politica%20de%20adicciones%202025.pdf" class="download-pdf-link"
+                            target="_blank" download>Descargar PDF →</a>
                     </div>
                 </div>
 
@@ -329,8 +150,8 @@
                     <div class="policy-icon-circle"><i class="fas fa-balance-scale"></i></div>
                     <div class="policy-text">
                         <h3>Código de Ética</h3>
-                        <a href="Politicas/12. CODIGO DE ETICA_2024.pdf" class="download-pdf-link" download>Descargar
-                            PDF →</a>
+                        <a href="Politicas/12.%20CODIGO%20DE%20ETICA_2026.pdf" class="download-pdf-link" target="_blank"
+                            download>Descargar PDF →</a>
                     </div>
                 </div>
 
@@ -339,8 +160,8 @@
                     <div class="policy-icon-circle"><i class="fas fa-gavel"></i></div>
                     <div class="policy-text">
                         <h3>Política de Derechos Humanos</h3>
-                        <a href="Politicas/10. POLITICA DERECHOS HUMANOS.pdf" class="download-pdf-link"
-                            download>Descargar PDF →</a>
+                        <a href="Politicas/10.%20POLITICA%20DE%20DERECHOS%20HUMANOS.pdf" class="download-pdf-link"
+                            target="_blank" download>Descargar PDF →</a>
                     </div>
                 </div>
 
@@ -349,8 +170,8 @@
                     <div class="policy-icon-circle"><i class="fas fa-user-shield"></i></div>
                     <div class="policy-text">
                         <h3>Política de Prevención del Riesgo Público</h3>
-                        <a href="Politicas/7. POLITICA DE PREVENCION DEL RIESGO PUBLICO.pdf" class="download-pdf-link"
-                            download>Descargar PDF →</a>
+                        <a href="Politicas/7.%20POLITICA%20DE%20PREVENCION%20DEL%20RIESGO%20PUBLICO.pdf"
+                            class="download-pdf-link" target="_blank" download>Descargar PDF →</a>
                     </div>
                 </div>
 
@@ -359,8 +180,8 @@
                     <div class="policy-icon-circle"><i class="fas fa-file-contract"></i></div>
                     <div class="policy-text">
                         <h3>Declaración de Conformidad</h3>
-                        <a href="Politicas/DECLARACIÓN DE CONFORMIDAD.pdf" class="download-pdf-link" download>Descargar
-                            PDF →</a>
+                        <a href="Politicas/DECLARACI%C3%93N%20DE%20CONFORMIDAD.pdf" class="download-pdf-link"
+                            target="_blank" download>Descargar PDF →</a>
                     </div>
                 </div>
 
@@ -369,8 +190,8 @@
                     <div class="policy-icon-circle"><i class="fas fa-user-secret"></i></div>
                     <div class="policy-text">
                         <h3>Política del Delator</h3>
-                        <a href="Politicas/11. POLITICA DEL DELATOR.pdf" class="download-pdf-link" download>Descargar
-                            PDF →</a>
+                        <a href="Politicas/11.%20POLITICA%20DEL%20DELATOR.pdf" class="download-pdf-link" target="_blank"
+                            download>Descargar PDF →</a>
                     </div>
                 </div>
 
@@ -379,8 +200,8 @@
                     <div class="policy-icon-circle"><i class="fas fa-power-off"></i></div>
                     <div class="policy-text">
                         <h3>Política de Desconexión Laboral</h3>
-                        <a href="Politicas/10. POLITICA DE DE DESCONEXION LABORAL 2023.pdf" class="download-pdf-link"
-                            download>Descargar PDF →</a>
+                        <a href="Politicas/10.%20POLITICA%20DE%20DE%20DESCONEXION%20LABORAL.pdf"
+                            class="download-pdf-link" target="_blank" download>Descargar PDF →</a>
                     </div>
                 </div>
 
@@ -389,8 +210,8 @@
                     <div class="policy-icon-circle"><i class="fas fa-project-diagram"></i></div>
                     <div class="policy-text">
                         <h3>Política Sistema Integrado de Gestión</h3>
-                        <a href="Politicas/4. POLITICA SISTEMA INTEGRADO DE GESTION.pdf" class="download-pdf-link"
-                            download>Descargar PDF →</a>
+                        <a href="Politicas/4.%20POLITICA%20SISTEMA%20INTEGRADO%20DE%20GESTION.pdf"
+                            class="download-pdf-link" target="_blank" download>Descargar PDF →</a>
                     </div>
                 </div>
             </div>
@@ -400,7 +221,8 @@
         <section class="training-section">
             <h2 class="training-title">Capacitaciones</h2>
             <p class="training-subtitle">Nuestras capacitaciones están diseñadas para fortalecer las competencias de
-                nuestro equipo, promoviendo el conocimiento, la actualización constante y la correcta aplicación de los
+                nuestro equipo, promoviendo el conocimiento, la actualización constante y la correcta aplicación de
+                los
                 procedimientos, con el fin de garantizar un servicio eficiente, seguro y de alta calidad.</p>
 
             <div class="training-grid">
@@ -411,7 +233,8 @@
                         <div class="ppt-icon-box"><i class="fas fa-chart-line"></i></div>
                         <span class="card-tag">PPT</span>
                         <h4>Direccionamiento estratégico</h4>
-                        <a href="#" class="view-btn">Ver</a>
+                        <a href="https://www.canva.com/design/DAGrrhO6J1w/Qk0q3lUxpk0jrlFU1wMTdw/view?utm_content=DAGrrhO6J1w&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hfa4c6ceb88"
+                            class="view-btn" target="_blank" rel="noopener noreferrer">Ver</a>
                     </article>
                 </div>
 
@@ -421,8 +244,9 @@
                         <h3 class="module-card-title">Modulo 2</h3>
                         <div class="ppt-icon-box"><i class="fas fa-chart-line"></i></div>
                         <span class="card-tag">PPT</span>
-                        <h4>ISO 9001 – Sistema de gestión integral</h4>
-                        <a href="#" class="view-btn">Ver</a>
+                        <h4>ISO 9001 €“ Sistema de gestión integral</h4>
+                        <a href="https://heyzine.com/flip-book/7964674c40.html" class="view-btn" target="_blank"
+                            rel="noopener noreferrer">Ver</a>
                     </article>
                 </div>
 
@@ -432,8 +256,9 @@
                         <h3 class="module-card-title">Modulo 3</h3>
                         <div class="ppt-icon-box"><i class="fas fa-chart-line"></i></div>
                         <span class="card-tag">PPT</span>
-                        <h4>ISO 18788 – 28000 Sistema de gestión para las operaciones</h4>
-                        <a href="#" class="view-btn">Ver</a>
+                        <h4>ISO 18788 €“ 28000 Sistema de gestión para las operaciones</h4>
+                        <a href="https://heyzine.com/flip-book/ebf045e662.html" class="view-btn" target="_blank"
+                            rel="noopener noreferrer">Ver</a>
                     </article>
                 </div>
 
@@ -443,55 +268,56 @@
                         <h3 class="module-card-title">Modulo 4</h3>
                         <div class="ppt-icon-box"><i class="fas fa-chart-line"></i></div>
                         <span class="card-tag">PPT</span>
-                        <h4>ISO 45000 y Decreto 1072 de 2015 – SST</h4>
-                        <a href="#" class="view-btn">Ver</a>
+                        <h4>ISO 45000 y Decreto 1072 de 2015 €“ SST</h4>
+                        <a href="https://heyzine.com/flip-book/f83b3502c9.html" class="view-btn" target="_blank"
+                            rel="noopener noreferrer">Ver</a>
                     </article>
                 </div>
             </div>
         </section>
->>>>>>> 8131cdf (Actualización del proyecto)
+
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-header">
-<<<<<<< HEAD
-            <h2>Contáctenos</h2>
-        </div>
-        <div class="footer-container">
-            <!-- Brand -->
-            <div class="footer-brand">
-                <img src="images/logo.png" alt="Atmósfera de Seguridad" class="footer-logo">
-            </div>
 
-            <!-- Servicio al cliente -->
-=======
+    <footer class="footer">
+        <div class="footer-er">
             <h2>Contáctanos</h2>
         </div>
         <div class="footer-container">
             <!-- Columna 1: Logo ATM -->
             <div class="footer-logo-col">
-                <img src="images/logo.png" alt="Logo ATM" class="footer-logo-img">
+                <img src="images/Logos/logo.png" alt="Logo ATM" class="footer-logo-img">
             </div>
 
-            <!-- Columna 2: Servicio al cliente -->
->>>>>>> 8131cdf (Actualización del proyecto)
-            <div class="footer-column">
-                <h4>Servicio al cliente</h4>
-                <ul class="footer-list">
-                    <li><i class="far fa-envelope"></i> <a
-                            href="mailto:info@atmosferadeseguridad.com">info@atmosferadeseguridad.com</a></li>
-                    <li><i class="fas fa-phone-alt"></i> (601) 300 46 34</li>
-                    <li><i class="fas fa-mobile-alt"></i> +57 350 323 49 40</li>
-                </ul>
+            <!-- Columna 2: Servicio al cliente + Siguenos + Supervigilancia -->
+            <div class="footer-column footer-left-aligned">
+                <div class="footer-group">
+                    <h4>Servicio al cliente</h4>
+                    <ul class="footer-list">
+                        <li><i class="far fa-envelope"></i> <a
+                                href="mailto:info@atmosferadeseguridad.com">info@atmosferadeseguridad.com</a></li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+576013004634">(601) 300 46 34</a></li>
+                        <li><i class="fas fa-mobile-alt"></i> <a href="tel:+573503234940">+57 350 323 49 40</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-group footer-integrated-group">
+                    <h4>Siguenos</h4>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/AtmosferadeSeguridad" aria-label="Facebook" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/atmosferadeseguridad/" aria-label="Instagram" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@atmsfera.de.segur?_r=1&_t=ZS-94OLKPOkWPM" aria-label="TikTok"
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
 
-<<<<<<< HEAD
-            <!-- Corporativo -->
-=======
             <!-- Columna 3: Correos Corporativos -->
->>>>>>> 8131cdf (Actualización del proyecto)
-            <div class="footer-column">
+            <div class="footer-column footer-left-aligned">
                 <div class="footer-group">
                     <h4>Comercial</h4>
                     <ul class="footer-list">
@@ -511,48 +337,39 @@
                     <h4>Gestión Humana</h4>
                     <ul class="footer-list">
                         <li><i class="far fa-envelope"></i> <a
-                                href="mailto:gestionhumana@atmseguridadltda.com">gestionhumana@atmseguridadltda.com</a>
+                                href="mailto:gestionhuman@atmseguridadltda.com">gestionhuman@atmseguridadltda.com</a>
                         </li>
                     </ul>
                 </div>
             </div>
-
-<<<<<<< HEAD
-            <!-- Redes sociales -->
-            <div class="footer-column">
-=======
-            <!-- Columna 4: Redes y Supervigilancia -->
-            <div class="footer-social-col">
->>>>>>> 8131cdf (Actualización del proyecto)
-                <h4>Siguenos</h4>
-                <div class="footer-socials">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-<<<<<<< HEAD
-=======
-                <div class="footer-super-box">
+            <!-- Columna 4: Vigilado Por (Derecha) -->
+            <div class="footer-column footer-right-col">
+                <div class="footer-super-box-integrated">
                     <span class="footer-super-label">VIGILADO POR:</span>
                     <div class="footer-super-logo-wrapper">
                         <img src="images/06 super.png" alt="Supervigilancia" class="footer-super-logo-img">
                         <div class="footer-super-flag"></div>
                     </div>
                 </div>
->>>>>>> 8131cdf (Actualización del proyecto)
             </div>
         </div>
     </footer>
 
-<<<<<<< HEAD
-        <div class="footer-bottom">
-            © 2026 Atmósfera de Seguridad. Todos los derechos reservados.
-        </div>
-    </footer>
 
-=======
->>>>>>> 8131cdf (Actualización del proyecto)
+
+
+    <!-- ATERA MODAL -->
+    <div id="ateraModal" class="atera-modal">
+        <div class="atera-modal-content">
+            <span class="atera-close" onclick="closeAteraModal()">&times;</span>
+            <div class="atera-modal-bg"></div>
+            <div class="atera-modal-body">
+                <h2>Próximamente: ATERA</h2>
+                <p>Muy pronto presentaremos una nueva forma de entender la seguridad.</p>
+                <p class="atera-highlight">ATERA está por comenzar una nueva era en la gestión de seguridad.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

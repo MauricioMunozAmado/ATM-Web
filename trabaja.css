@@ -1,5 +1,4 @@
-/* ==========================================
-   TRABAJA CON NOSOTROS - PÁGINA CUSTOM
+/* ===================================   TRABAJA CON NOSOTROS - PÁGINA PERSONALIZADA
    ========================================== */
 
 /* VARIABLES LOCALES (Si se necesitan adicionales) */
@@ -11,17 +10,16 @@
 
 /* GENERAL */
 .trabaja-main {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url('images/Fondo/fondo negro.png') center/cover no-repeat fixed !important;
+    background: #05050a !important;
     color: #fff;
     min-height: 100vh;
 }
 
 .trabaja-container {
-    max-width: 1400px;
-    /* Wider for that broad banner look */
+    max-width: 1100px;
+    /* Estandarizado con otras páginas internas */
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 4%;
 }
 
 .highlight-yellow {
@@ -30,70 +28,86 @@
 
 /* HERO SECTION */
 .trabaja-hero {
-    padding: 5rem 0 5rem;
+    padding: 0;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url('images/Fondo/fondo negro.png') center/cover no-repeat;
+    background: url(images/Fondo/fondo-negro.png) center/cover no-repeat;
 }
 
-.hero-split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Strict 50/50 */
-    gap: 4rem;
+.trabaja-hero .global-hero-card {
+    margin: 1rem auto 1rem;
+}
+
+@media (min-width: 768px) {
+    .trabaja-hero .global-hero-card {
+        height: 24rem;
+        /* Altura de escritorio estandarizada */
+        margin: 1.5rem auto 1.5rem;
+    }
+}
+
+
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
     align-items: center;
-    /* Vertical center alignment */
+    justify-content: space-between;
+    gap: 5rem;
+    /* Ajustado para la imagen de referencia */
+    width: 100%;
 }
 
-.hero-title-col {
+.hero-title-group {
+    flex: 1.2;
+    /* Un poco más de espacio para el título */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
-.trabaja-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 5rem;
-    line-height: 0.95;
-    font-weight: 700;
-    letter-spacing: -1px;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    text-align: left;
-}
-
-.txt-yellow {
-    color: var(--trabaja-gold);
-}
-
-.txt-white {
-    color: #ffffff;
-}
-
-.hero-text-col {
+.hero-subtitle-group {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    max-width: 480px;
+}
+
+/* Coincidencia de referencia 1:1 para el título del Banner */
+.banner-title-ref {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    text-align: left !important;
+    line-height: 0.85 !important;
+}
+
+.banner-title-ref span {
+    font-size: 4.5rem !important;
+    /* Reducido un 30% desde 6.5rem para ajustarse mejor a la tarjeta */
+    font-weight: 950;
+    font-family: 'Montserrat', sans-serif !important;
+    /* Más cercano al estilo de la imagen */
+    letter-spacing: -3px !important;
+    text-transform: none;
+    white-space: nowrap;
 }
 
 .hero-description {
     font-family: 'Arimo', sans-serif;
-    font-size: 1.1rem;
-    /* Precise Arimo sizing */
-    line-height: 1.5;
+    font-size: 1.15rem;
+    line-height: 1.4;
     color: #ffffff;
     text-align: justify;
     margin: 0;
-    max-width: 440px;
-    /* Tight wrap like the image */
 }
 
 /* APLICACIÓN SECTION */
 .trabaja-aplicacion {
     padding: 1rem 0 2rem;
-    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('images/Fondo/Fondo_blanco.jpg') center/cover no-repeat !important;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('images/Fondo/fondo-blanco.jpg') center/cover no-repeat !important;
     position: relative;
 }
 
@@ -114,10 +128,10 @@
 
 .aplicacion-grid-fidelity {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    max-width: 1400px;
+    gap: 4rem;
+    max-width: 1100px;
     width: 100%;
     margin: 0 auto;
 }
@@ -138,7 +152,7 @@
     max-width: 900px;
     /* Ampliado horizontalmente */
     background: #1c2536;
-    /* Friendlier dark blue-grey */
+    /* Azul-gris oscuro más amigable */
     padding: 1.5rem 2rem;
     border-radius: 12px;
     border: none;
@@ -188,7 +202,7 @@
     font-family: inherit;
     font-size: 1rem;
     padding: 12px 15px;
-    /* Spaced internally so they look like text boxes */
+    /* Espaciado interno para que parezcan cuadros de texto */
     min-height: 80px;
     text-align: left;
     resize: vertical;
@@ -228,7 +242,7 @@
 .final-submit-btn {
     width: 100%;
     background: #f6e05e;
-    /* Vibrant yellow */
+    /* Amarillo vibrante */
     color: #000;
     border: none;
     padding: 0.8rem;
@@ -251,107 +265,6 @@
     background: #e6c200;
 }
 
-/* =========================================================
-   NUEVA SECCIÓN EQUIPO OPERATIVO (REPLICA EXACTA)
-   ========================================================= */
-.equipo-operativo-new {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url('images/Fondo/fondo negro.png') center/cover no-repeat;
-    padding: 6rem 0;
-    width: 100%;
-}
-
-.equipo-header-new {
-    text-align: center;
-    margin-bottom: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.title-equipo-new {
-    font-family: 'Oswald', sans-serif;
-    font-size: 3.5rem;
-    color: #f6e05e;
-    /* Exact golden yellow from image */
-    margin-bottom: 1rem;
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: 0.5px;
-}
-
-.subtitle-equipo-new {
-    font-family: inherit;
-    font-size: 1.05rem;
-    color: #ffffff;
-    max-width: 900px;
-    line-height: 1.5;
-    margin: 0;
-}
-
-.grid-equipo-new {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
-    row-gap: 3.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.card-equipo-new {
-    display: flex;
-    align-items: center;
-    /* Center icon and text vertically with each other */
-    gap: 1.8rem;
-}
-
-.icon-box-new {
-    flex: 0 0 90px;
-    width: 90px;
-    height: 90px;
-    background-color: #f6e05e;
-    /* Exact yellow box from image */
-    border-radius: 18px;
-    /* Smooth rounded corners */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 18px;
-    box-sizing: border-box;
-}
-
-.icon-box-new img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    /* Turn the icon pure black to contrast with yellow box */
-    filter: brightness(0);
-}
-
-.text-box-new {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.text-box-new h3 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.8rem;
-    color: #ffffff;
-    margin: 0 0 0.4rem 0;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.text-box-new p {
-    font-family: 'Arimo', sans-serif;
-    font-size: 0.85rem;
-    color: #cbd5e1;
-    /* Light grayish/white from the image */
-    line-height: 1.5;
-    margin: 0;
-    text-align: left;
-}
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
@@ -390,4 +303,119 @@
     }
 
 
+}
+
+/* SECCIÓN: NUESTRO EQUIPO OPERATIVO */
+.operativo-section {
+    padding: 2rem 0;
+    /* Reducido de 4rem */
+    background: url('images/Fondo/fondo-negro.png') center/cover no-repeat;
+    color: #ffffff;
+    position: relative;
+}
+
+.operativo-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    /* Reducido de 3.5rem */
+}
+
+.operativo-title {
+    font-size: 2.2rem;
+    /* Reducido de 3rem */
+    font-weight: 950;
+    color: #f9dd47;
+    margin-bottom: 0.8rem;
+    font-family: 'Arimo', sans-serif;
+    letter-spacing: -1px;
+}
+
+.operativo-subtitle {
+    font-size: 1.1rem;
+    /* Un poco más pequeño */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.operativo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+    /* Ajustado de 3rem 2.5rem */
+    max-width: 950px;
+    /* Un poco más compacto */
+    margin: 0 auto;
+}
+
+.operativo-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.operativo-icon {
+    flex: 0 0 75px;
+    width: 75px;
+    height: 75px;
+    background: #f9dd47;
+    border-radius: 10px;
+    /* Coincidiendo con la sutileza de la imagen de referencia */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+.operativo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.operativo-info h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #f9dd47;
+    /* Amarillo igual que los iconos */
+    margin: 0 0 0.1rem 0;
+    font-family: 'Oswald', 'Arimo Condensed', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.operativo-info p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    text-align: justify;
+}
+
+@media (max-width: 1100px) {
+    .operativo-grid {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .operativo-title {
+        font-size: 2.5rem;
+    }
+
+    .operativo-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .operativo-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .operativo-info p {
+        text-align: center;
+    }
 }

@@ -1,0 +1,158 @@
+/* ===================================   ESTRATEGIA DE BIENESTAR (GRID FIDELITY)
+   ========================================== */
+.wellness-section-fidelity {
+    padding: 3rem 0 5rem 0;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.benefits-grid-fidelity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.benefit-card-fidelity {
+    position: relative;
+    background: #f5f5f5;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    min-height: 100px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.benefit-card-fidelity:hover {
+    transform: translateY(-5px);
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-card-fidelity::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+}
+
+.benefit-icon-box {
+    position: relative;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.benefit-icon-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.benefit-fa-icon {
+    font-size: 2rem;
+    color: #333;
+}
+
+.benefit-text-box {
+    position: relative;
+    z-index: 2;
+    padding-left: 0.5rem;
+}
+
+.benefit-text-box h3 {
+    font-family: 'Arimo', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.25;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .benefits-grid-fidelity {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-grid-fidelity {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+}
+
+/* ===================================   HERO BANNER REFINEMENT (INDEX)
+   ========================================== */
+.hero-text-content h1,
+.hero-text-content [class^="hero-line"] {
+    text-transform: uppercase;
+}
+
+.hero-text-content [class^="word-"] {
+    text-transform: uppercase;
+    font-family: 'Futura', var(--font-titles);
+}
+
+.word-humana {
+    font-size: 8rem !important;
+}
+
+/* VIDEO CARD FIDELITY - RESPONSIVE & COMPLETE */
+.hero-card,
+.video-card-fidelity {
+    position: relative;
+    overflow: hidden;
+    padding: 0 !important;
+    display: block !important;
+    background: #000;
+}
+
+.hero-card::after {
+    display: none !important;
+}
+
+.hero-card .video-container,
+.video-card-fidelity .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-card .video-container video,
+.video-card-fidelity .video-container video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    filter: none !important;
+    /* Removing dark filter for a natural look */
+    /* Ensuring all internal video content/text is visible without cropping */
+    background-color: #000;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .hero-card {
+        aspect-ratio: 16 / 9;
+        /* Only keep ratio on mobile if desired, or remove entirely */
+        height: auto !important;
+    }
+}
