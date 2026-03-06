@@ -1,0 +1,16 @@
+
+# Clutter
+.gemini/
+.agents/
+/tmp/
+
+# Large Files (>10MB recommended for GitHub)
+images/Pagina 300126.pdf
+images/01 Vigilancia Fijaa.png
+images/video1.mp4
+images/video.mp4
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+.DS_Store
