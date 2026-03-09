@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quiénes Somos? - Atmósfera de Seguridad</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="images/Logos/Logos-02.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/Logos/Logos-02.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="images/Logos/Logos-02.png">
+
+
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/Logos/logo.png" alt="Atmósfera de Seguridad" class="logo-image">
+                <div class="logo-text"></div>
+            </div>
+
+            <!-- Enlaces de navegación (Desktop) -->
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html" class="active">¿Quiénes Somos?</a></li>
+                <li><a href="centro-de-aprendizaje.html">Centro de Aprendizaje</a></li>
+                <li><a href="atencion-al-usuario.html">Atención al Usuario</a></li>
+                <li><a href="nuestra-cultura.html">Nuestra Cultura</a></li>
+                <li><a href="#" onclick="openAteraModal(event)">Atera</a></li>
+            </ul>
+
+            <a href="trabaja-con-nosotros.html" class="cta-button">Trabaja con Nosotros</a>
+
+            <!-- Botón de menú hamburguesa (Móvil) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <!-- Menú móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html" class="mobile-link">Inicio</a></li>
+                <li><a href="quienes-somos.html" class="mobile-link active">¿Quiénes Somos?</a></li>
+                <li><a href="centro-de-aprendizaje.html" class="mobile-link">Centro de Aprendizaje</a></li>
+                <li><a href="atencion-al-usuario.html" class="mobile-link">Atención al Usuario</a></li>
+                <li><a href="nuestra-cultura.html" class="mobile-link">Nuestra Cultura</a></li>
+                <li><a href="#" class="mobile-link">Atera</a></li>
+            </ul>
+            <div class="mobile-cta">
+                <a href="trabaja-con-nosotros.html" class="cta-button"
+                    style="display: block; text-align: center;">Trabaja con Nosotros</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- BANNER PRINCIPAL -->
+        <section class="hero-banner">
+            <div class="container-aligned">
+                <div class="hero-card nos-hero-card">
+                    <!-- Texto del Banner (Izquierda) -->
+                    <div class="hero-text-content nos-hero-text">
+                        <h1 class="banner-title">
+                            <span class="text-yellow">¿Quiénes</span>
+                            <span class="text-white">somos?</span>
+                        </h1>
+                    </div>
+
+                    <!-- Espacio para la imagen (Derecha) -->
+                    <div class="nos-image-side"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Misión & Visión -->
+        <section class="mission-vision-section">
+            <div class="mission-vision-container">
+                <div class="mission-vision-image">
+                    <img src="images/mision-vision-restaurada.png" alt="Dirección General Atmósfera de Seguridad">
+                </div>
+                <div class="mission-vision-content">
+                    <div class="mission-vision-item">
+                        <div class="eyebrow-container">
+                            <div class="eyebrow-line"></div>
+                            <span class="eyebrow">NOSOTROS</span>
+                        </div>
+
+                        <h2>Misión</h2>
+                        <p>Nuestra razón de ser es la seguridad con calidad humana reflejada en el servicio prestado
+                            con
+                            excelente capital humano cuyo objetivo principal es satisfacer los requerimientos de
+                            nuestras partes interesadas, prestando servicios de vigilancia y seguridad privada, en las
+                            modalidades de vigilancia fija, móvil, escolta a personas, vehículos y mercancías con y
+                            sin
+                            armas de fuego, y recurso tecnológico.</p>
+
+                    </div>
+                    <div class="mission-vision-item">
+                        <h2>Visión</h2>
+                        <p>Nuestra razón de ser es la seguridad con calidad humana reflejada en el servicio prestado
+                            con
+                            excelente capital humano cuyo objetivo principal es satisfacer los requerimientos de
+                            nuestras partes interesadas, prestando servicios de vigilancia y seguridad privada, en las
+                            modalidades de vigilancia fija, móvil, escolta a personas, vehículos y mercancías con y
+                            sin
+                            armas de fuego, y recurso tecnológico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección Indicadores (Estadísticas) -->
+        <section class="stats-panel">
+            <div class="stat-item">
+                <h3 class="counter" data-target="20">+20</h3>
+                <p>años de experiencia</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="200">+200</h3>
+                <p>clientes activos</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="24">24/7</h3>
+                <p>monitoreo continuo</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="100">100%</h3>
+                <p>cumplimiento normativo</p>
+            </div>
+        </section>
+
+        <!-- Sección Certificaciones -->
+        <section class="certs-section">
+            <h2 class="certs-title">Excelencia operativa con estándares <br> de calidad internacionales</h2>
+            <div class="certs-cards-grid">
+                <div class="cert-card">
+                    <img src="images/iqnet.png" alt="IQNET">
+                </div>
+                <div class="cert-card">
+                    <img src="images/9001.png" alt="ISO 9001">
+                </div>
+                <div class="cert-card">
+                    <img src="images/18788.png" alt="ISO 18788">
+                </div>
+                <div class="cert-card">
+                    <img src="images/28000.png" alt="ISO 28000">
+                </div>
+                <div class="cert-card">
+                    <img src="images/45001.png" alt="ISO 45001">
+                </div>
+                <div class="cert-card">
+                    <img src="images/fenalco.png" alt="Fenalco Solidario">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Mapa Highlights -->
+        <section class="mapa-estrategico">
+            <h2 class="mapa-title">Mapa estratégico de reacción y cobertura operativa</h2>
+            <div class="mapa-container">
+                <div class="mapa-text-card">
+                    <p>Contamos con cobertura estratégica y capacidad de reacción inmediata en las principales zonas
+                        de
+                        <b>Bogotá</b>, respaldada por una operación que se extiende a otros municipios de Cundinamarca
+                        como <b>Cajicá, Chía, Tocancipá, Soacha, Girardot y más...</b> garantizando atención
+                        oportuna y
+                        continuidad del servicio.
+                    </p>
+                </div>
+                <div class="mapa-image-container">
+                    <div class="map-wrapper">
+                        <img src="images/10 Mapa-08.png" alt="Mapa de Cobertura" class="mapa-image">
+
+                        <!-- 11 Indicadores/Marcadores Finales Posicionados por el Usuario -->
+                        <div class="map-marker" style="top: 17.73%; left: 66.04%;">
+                            <span class="marker-dot"></span>
+                            <span class="marker-label">Suba</span>
+                        </div>
+                        <div class="map-marker" style="top: 22.63%; left: 72.74%;">
+                            <span class="marker-dot"></span>
+                            <span class="marker-label">Usaquén</span>
+                        </div>
+                        <div class="map-marker" style="top: 25.49%; left: 56.72%;">
+                            <span class="marker-dot"></span>
+                            <span class="marker-label">Engativa</span>
+                        </div>
+                        <div class="map-marker" style="top: 31.01%; left: 63.06%;">
+                            <span class="marker-dot"></span>
+                            <span class="marker-label">B Unidos</span>
+                        </div>
+                        <div class="map-marker" style="top: 35.71%; left: 67.72%;">
+                            <span class="marker-dot"></span>
+                            <span class="marker-label">Chapinero</span>
+                        </div>
+                        <div class="map-marker" style="top: 38.78%; left: 51.7%;">
+                            <span class="marker-dot"></span>
+                            <span class="marker-label">Kennedy</span>
+                        </div>
+                        <div class="map-marker" style="top: 29.99%; left: 49.79%;">
+                            <span class="marker-dot"></span>
+                            <span class="marker-label">Fontibón</span>
+                        </div>
+                        <div class="map-marker" style="top: 35.71%; left: 57.44%;">
+                            <span class="marker-dot"></span>
+                            <span class="marker-label">Teusaquillo</span>
+                        </div>
+                        <div class="map-marker" style="top: 34.69%; left: 44.53%;">
+                            <span class="marker-dot"></span>
+                            <span class="marker-label">P Aranda</span>
+                        </div>
+                        <div class="map-marker" style="top: 49.81%; left: 39.63%;">
+                            <span class="marker-dot"></span>
+                            <span class="marker-label">Ciudad Bolivar</span>
+                        </div>
+                        <div class="map-marker" style="top: 43.27%; left: 57.08%;">
+                            <span class="marker-dot"></span>
+                            <span class="marker-label">Rafael Uribe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Testimonios - ALTA FIDELIDAD -->
+        <section class="testimonials-fidelity">
+            <h2 class="fidelity-title">Lo que dicen de nosotros</h2>
+            <p class="fidelity-subtitle">La satisfacción de nuestros clientes respalda la calidad y el compromiso de
+                nuestro trabajo.</p>
+
+            <div class="fidelity-grid">
+                <!-- Tarjeta 1 (Oscura) - Maria Salcedo - Estrellas + Icono de mapa -->
+                <div class="fidelity-item">
+                    <article class="fidelity-card card-dark">
+                        <div class="card-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="card-text">Excelente empresa con muy buen nivel de personal altamente calificado.</p>
+                        <div class="card-badge">
+                            <a href="https://www.google.com/maps/search/ATM+Atmósfera+de+Seguridad+Bogotá+Carrera+52+71+A-09"
+                                target="_blank" rel="noopener noreferrer"><i
+                                    class="fas fa-map-marker-alt card-social-icon"></i></a>
+                        </div>
+                    </article>
+                    <div class="card-author">
+                        <img src="images/testimonio_maria.png" alt="Maria Salcedo" class="author-avatar">
+                        <div class="author-info">
+                            <h4 class="author-name">Maria Salcedo</h4>
+                            <span class="author-role">Cliente de servicio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 (Clara) - Angela Zanabria - Recomienda + Facebook -->
+                <div class="fidelity-item">
+                    <article class="fidelity-card card-light">
+                        <p class="card-recommends"><em>Recomienda</em></p>
+                        <p class="card-text"><span class="quote-open"><i class="fas fa-quote-left"></i></span> Por su
+                            calidad humana y estabilidad Laboral. <span class="quote-close"><i
+                                    class="fas fa-quote-right"></i></span></p>
+                        <div class="card-badge">
+                            <a href="https://www.facebook.com/AtmosferadeSeguridad" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-facebook card-social-icon"></i></a>
+                        </div>
+                    </article>
+                    <div class="card-author">
+                        <img src="images/testimonio_angela.png" alt="Angela Zanabria" class="author-avatar">
+                        <div class="author-info">
+                            <h4 class="author-name">Angela Zanabria</h4>
+                            <span class="author-role">Colaborador interno</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 (Oscura) - Ovidio Rodriguez - Comillas + Instagram -->
+                <div class="fidelity-item">
+                    <article class="fidelity-card card-dark">
+                        <div class="card-quote-top"><i class="fas fa-quote-left"></i></div>
+                        <p class="card-text">Excelente empresa; gracias a Dios pertenezco a esta gran familia.</p>
+                        <div class="card-badge">
+                            <a href="https://www.instagram.com/atmosferadeseguridad/" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-instagram card-social-icon"></i></a>
+                        </div>
+
+                    </article>
+                    <div class="card-author">
+                        <img src="images/testimonio_ovidio.png" alt="Ovidio Rodriguez" class="author-avatar">
+                        <div class="author-info">
+                            <h4 class="author-name">Ovidio Rodriguez</h4>
+                            <span class="author-role">Vigilante</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Tarjeta 4 (Clara) - Vicente Fernandez - LinkedIn -->
+                <div class="fidelity-item">
+                    <article class="fidelity-card card-light">
+                        <div class="card-quote-top dark-quote"><i class="fas fa-quote-left"></i></div>
+                        <p class="card-text">Excelente atención y altos estándares en cada servicio recibido.</p>
+                        <div class="card-badge">
+                            <a href="https://www.linkedin.com/company/ATM" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-linkedin-in card-social-icon"></i></a>
+                        </div>
+
+                    </article>
+                    <div class="card-author">
+                        <img src="images/testimonio_vicente.png" alt="Vicente Fernandez" class="author-avatar">
+                        <div class="author-info">
+                            <h4 class="author-name">Vicente Fernandez</h4>
+
+                            <span class="author-role">Administrador de Conjunto</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="footer">
+        <div class="footer-er">
+            <h2>Contáctanos</h2>
+        </div>
+        <div class="footer-container">
+            <!-- Columna 1: Logo ATM -->
+            <div class="footer-logo-col">
+                <img src="images/Logos/logo.png" alt="Logo ATM" class="footer-logo-img">
+            </div>
+
+            <!-- Columna 2: Servicio al cliente + Siguenos + Supervigilancia -->
+            <div class="footer-column footer-left-aligned">
+                <div class="footer-group">
+                    <h4>Servicio al cliente</h4>
+                    <ul class="footer-list">
+                        <li><i class="far fa-envelope"></i> <a
+                                href="mailto:info@atmosferadeseguridad.com">info@atmosferadeseguridad.com</a></li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+576013004634">(601) 300 46 34</a></li>
+                        <li><i class="fas fa-mobile-alt"></i> <a href="tel:+573503234940">+57 350 323 49 40</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-group footer-integrated-group">
+                    <h4>Siguenos</h4>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/AtmosferadeSeguridad" aria-label="Facebook" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/atmosferadeseguridad/" aria-label="Instagram" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@atmsfera.de.segur?_r=1&_t=ZS-94OLKPOkWPM" aria-label="TikTok"
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna 3: Correos Corporativos -->
+            <div class="footer-column footer-left-aligned">
+                <div class="footer-group">
+                    <h4>Comercial</h4>
+                    <ul class="footer-list">
+                        <li><i class="far fa-envelope"></i> <a
+                                href="mailto:Comercial@atmseguridadltda.com">Comercial@atmseguridadltda.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-group">
+                    <h4>Financiero</h4>
+                    <ul class="footer-list">
+                        <li><i class="far fa-envelope"></i> <a
+                                href="mailto:administrativo@atmseguridadltda.com">administrativo@atmseguridadltda.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-group">
+                    <h4>Gestión Humana</h4>
+                    <ul class="footer-list">
+                        <li><i class="far fa-envelope"></i> <a
+                                href="mailto:gestionhumana@atmseguridadltda.com">gestionhumana@atmseguridadltda.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Columna 4: Vigilado Por (Derecha) -->
+            <div class="footer-column footer-right-col">
+                <div class="footer-super-box-integrated">
+                    <span class="footer-super-label">VIGILADO POR:</span>
+                    <div class="footer-super-logo-wrapper">
+                        <img src="images/06 super.png" alt="Supervigilancia" class="footer-super-logo-img">
+                        <div class="footer-super-flag"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ATERA MODAL -->
+    <div id="ateraModal" class="atera-modal">
+        <div class="atera-modal-content">
+            <span class="atera-close" onclick="closeAteraModal()">&times;</span>
+            <div class="atera-modal-bg"></div>
+            <div class="atera-modal-body">
+                <h2>Próximamente: ATERA</h2>
+                <p>Muy pronto presentaremos una nueva forma de entender la seguridad.</p>
+                <p class="atera-highlight">ATERA está por comenzar una nueva era en la gestión de seguridad.</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html#quote-section" class="fixed-quote-btn">Cotizar</a>
+    <script src="script.js"></script>
+</body>
+
+</html>

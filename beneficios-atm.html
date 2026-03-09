@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneficios ATM - Atmósfera de Seguridad</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="images/Logos/Logos-02.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/Logos/Logos-02.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="images/Logos/Logos-02.png">
+
+
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/Logos/logo.png" alt="Atmósfera de Seguridad" class="logo-image">
+                <div class="logo-text"></div>
+            </div>
+
+            <!-- Enlaces de navegación (Desktop) -->
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                <li><a href="centro-de-aprendizaje.html">Centro de Aprendizaje</a></li>
+                <li><a href="atencion-al-usuario.html">Atención al Usuario</a></li>
+                <li><a href="nuestra-cultura.html">Nuestra Cultura</a></li>
+                <li><a href="#">Atera</a></li>
+            </ul>
+
+            <a href="trabaja-con-nosotros.html" class="cta-button">Trabaja con Nosotros</a>
+
+            <!-- Botón de menú hamburguesa (Móvil) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <!-- Menú móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html" class="mobile-link">Inicio</a></li>
+                <li><a href="quienes-somos.html" class="mobile-link">¿Quiénes Somos?</a></li>
+                <li><a href="centro-de-aprendizaje.html" class="mobile-link">Centro de Aprendizaje</a></li>
+                <li><a href="atencion-al-usuario.html" class="mobile-link">Atención al Usuario</a></li>
+                <li><a href="nuestra-cultura.html" class="mobile-link">Nuestra Cultura</a></li>
+                <li><a href="#" class="mobile-link">Atera</a></li>
+            </ul>
+            <div class="mobile-cta">
+                <a href="trabaja-con-nosotros.html" class="cta-button"
+                    style="display: block; text-align: center;">Trabaja con Nosotros</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <!-- Sección Galería -->
+        <section class="section-container galeria-section">
+            <h2 class="section-title">Galeria</h2>
+
+            <div class="galeria-grid">
+                <!-- Elemento 1 -->
+                <div class="galeria-item">
+                    <div class="galeria-image-container">
+                        <img src="images/vigilancia-fija.jpg" alt="Evento 1" class="galeria-image">
+                    </div>
+                    <button class="btn-ver-galeria" onclick="openGalleryModal('evento1')">Ver Galería</button>
+                </div>
+
+                <!-- Elemento 2 -->
+                <div class="galeria-item">
+                    <div class="galeria-image-container">
+                        <img src="images/vigilancia-movil.jpg" alt="Evento 2" class="galeria-image">
+                    </div>
+                    <button class="btn-ver-galeria" onclick="openGalleryModal('evento2')">Ver Galería</button>
+                </div>
+
+                <!-- Elemento 3 -->
+                <div class="galeria-item">
+                    <div class="galeria-image-container">
+                        <img src="images/tecnologia.jpg" alt="Evento 3" class="galeria-image">
+                    </div>
+                    <button class="btn-ver-galeria" onclick="openGalleryModal('evento3')">Ver Galería</button>
+                </div>
+
+                <!-- Elemento 4 -->
+                <div class="galeria-item">
+                    <div class="galeria-image-container">
+                        <img src="images/escolta.jpg" alt="Evento 4" class="galeria-image">
+                    </div>
+                    <button class="btn-ver-galeria" onclick="openGalleryModal('evento4')">Ver Galería</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de Galería -->
+        <div id="galleryModal" class="modal">
+            <div class="modal-content gallery-modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="galleryTitle">Galería de Eventos</h2>
+
+                <div class="gallery-upload-section">
+                    <p>Sube tus fotos del evento aquí:</p>
+                    <input type="file" id="imageUpload" accept="image/*" multiple>
+                    <label for="imageUpload" class="upload-btn">Subir Imágenes</label>
+                </div>
+
+                <div class="gallery-display" id="galleryDisplay">
+                    <!-- Las imágenes se inyectarán aquí -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Blog -->
+        <section class="section-container blog-section">
+            <h2 class="section-title">Blog ATM</h2>
+
+            <div class="blog-grid">
+                <!-- Blog 1 -->
+                <div class="blog-item">
+                    <div class="pdf-preview">
+                        <iframe src="Politicas/12. CODIGO DE ETICA_2024.pdf" width="100%" height="100%"
+                            style="border: none;" loading="lazy" title="Código de Ética"></iframe>
+                    </div>
+                    <div class="item-content">
+                        <h3>Código de Ética 2024</h3>
+                        <a href="Politicas/12. CODIGO DE ETICA_2024.pdf" class="link-download" target="_blank">Descargar
+                            PDF</a>
+                    </div>
+                </div>
+
+                <!-- Blog 2 -->
+                <div class="blog-item">
+                    <div class="pdf-preview">
+                        <iframe src="Politicas/10. POLITICA DERECHOS HUMANOS.pdf" width="100%" height="100%"
+                            style="border: none;" loading="lazy" title="Política de Derechos Humanos"></iframe>
+                    </div>
+                    <div class="item-content">
+                        <h3>Política de Derechos Humanos</h3>
+                        <a href="Politicas/10. POLITICA DERECHOS HUMANOS.pdf" class="link-download"
+                            target="_blank">Descargar PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PIE DE PÁGINA (FOOTER) -->
+        <footer class="footer">
+            <div class="footer-er">
+                <h2>Contáctanos</h2>
+            </div>
+            <div class="footer-container">
+                <!-- Columna 1: Logo ATM -->
+                <div class="footer-logo-col">
+                    <img src="images/Logos/logo.png" alt="Logo ATM" class="footer-logo-img">
+                </div>
+
+                <!-- Columna 2: Servicio al cliente + Siguenos + Supervigilancia -->
+                <div class="footer-column footer-left-aligned">
+                    <div class="footer-group">
+                        <h4>Servicio al cliente</h4>
+                        <ul class="footer-list">
+                            <li><i class="far fa-envelope"></i> <a
+                                    href="mailto:info@atmosferadeseguridad.com">info@atmosferadeseguridad.com</a></li>
+                            <li><i class="fas fa-phone-alt"></i> <a href="tel:+576013004634">(601) 300 46 34</a></li>
+                            <li><i class="fas fa-mobile-alt"></i> <a href="tel:+573503234940">+57 350 323 49 40</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-group footer-integrated-group">
+                        <h4>Siguenos</h4>
+                        <div class="footer-socials">
+                            <a href="https://www.facebook.com/AtmosferadeSeguridad" aria-label="Facebook"
+                                target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/atmosferadeseguridad/" aria-label="Instagram"
+                                target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@atmsfera.de.segur?_r=1&_t=ZS-94OLKPOkWPM"
+                                aria-label="TikTok" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-tiktok"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 3: Correos Corporativos -->
+                <div class="footer-column footer-left-aligned">
+                    <div class="footer-group">
+                        <h4>Comercial</h4>
+                        <ul class="footer-list">
+                            <li><i class="far fa-envelope"></i> <a
+                                    href="mailto:Comercial@atmseguridadltda.com">Comercial@atmseguridadltda.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4>Financiero</h4>
+                        <ul class="footer-list">
+                            <li><i class="far fa-envelope"></i> <a
+                                    href="mailto:administrativo@atmseguridadltda.com">administrativo@atmseguridadltda.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h4>Gestión Humana</h4>
+                        <ul class="footer-list">
+                            <li><i class="far fa-envelope"></i> <a
+                                    href="mailto:gestionhumana@atmseguridadltda.com">gestionhumana@atmseguridadltda.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Columna 4: Vigilado Por (Derecha) -->
+                <div class="footer-column footer-right-col">
+                    <div class="footer-super-box-integrated">
+                        <span class="footer-super-label">VIGILADO POR:</span>
+                        <div class="footer-super-logo-wrapper">
+                            <img src="images/06 super.png" alt="Supervigilancia" class="footer-super-logo-img">
+                            <div class="footer-super-flag"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </main>
+
+    <a href="index.html#quote-section" class="fixed-quote-btn">Cotizar</a>
+    <script src="script.js"></script>
+</body>
+
+</html>
