@@ -4044,6 +4044,11 @@ h6 {
     pointer-events: all;
 }
 
+/* Permitir que la etiqueta esté a la izquierda */
+.map-marker.label-left {
+    flex-direction: row-reverse;
+}
+
 .marker-dot {
     width: 10px;
     height: 10px;
@@ -4082,11 +4087,61 @@ h6 {
     cursor: text;
 }
 
+.map-marker.label-left .marker-label {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
 .map-marker:hover .marker-label {
     opacity: 1;
     transform: scale(1);
     background: var(--color-gold);
     color: #000;
+}
+
+/* Responsivo: Nombres siempre visibles en el mapa */
+@media (max-width: 768px) {
+    .marker-dot {
+        width: 5px;
+        height: 5px;
+    }
+
+    .marker-label {
+        opacity: 1 !important;
+        transform: scale(0.85) !important;
+        background: var(--color-gold);
+        color: #000;
+        font-weight: bold;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        padding: 1px 4px;
+        font-size: 0.55rem;
+        margin-left: 3px;
+    }
+
+    .map-marker.label-left .marker-label {
+        margin-right: 3px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .marker-label {
+        font-size: 0.45rem;
+        padding: 1px 2px;
+        letter-spacing: -0.2px;
+    }
+
+    .marker-dot {
+        width: 4px;
+        height: 4px;
+    }
+}
+
+@media (max-width: 360px) {
+    .marker-label {
+        font-size: 0.4rem;
+        padding: 0px 2px;
+    }
 }
 
 .testimonials-fidelity {
@@ -5245,10 +5300,44 @@ h6 {
     letter-spacing: -1.5px !important;
 }
 
-.wellness-full-img-v2 {
+.wellness-grid-v2 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1rem !important;
+    padding: 0 5% 3rem 5% !important;
+}
+
+.wellness-grid-v2 img {
     width: 100% !important;
-    height: auto !important;
-    display: block !important;
+    height: 220px !important;
+    /* Reducido para que las cards sean menos altas */
+    object-fit: contain !important;
+    /* Muestra la imagen COMPLETA sin recortar */
+    background: rgba(255, 255, 255, 0.6) !important;
+    /* Fondo suave */
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+    padding: 15px !important;
+    /* Espacio para que la imagen no toque los bordes */
+    transition: transform 0.3s ease !important;
+}
+
+.wellness-grid-v2 img:hover {
+    transform: translateY(-5px) !important;
+}
+
+@media (max-width: 992px) {
+    .wellness-grid-v2 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .wellness-grid-v2 {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
 }
 
 .blog-section {
@@ -5313,23 +5402,28 @@ h6 {
 }
 
 .blog-content h3 {
-    font-size: 1.6rem !important;
+    font-size: 1.4rem !important;
+    /* Reducido de 1.6rem */
     font-weight: 900 !important;
     color: #000 !important;
-    line-height: 1 !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.2rem !important;
 }
 
 .blog-role {
-    font-size: 0.85rem !important;
+    font-size: 0.8rem !important;
+    /* Reducido de 0.85rem */
     font-weight: 700 !important;
     color: #666 !important;
-    margin: 0.2rem 0 0.8rem 0 !important;
+    margin: 0.1rem 0 0.6rem 0 !important;
 }
 
 .blog-quote {
-    font-size: 0.95rem !important;
+    font-size: 0.88rem !important;
+    /* Reducido de 0.95rem */
     color: #222 !important;
-    line-height: 1.25 !important;
+    line-height: 1.2 !important;
+    /* Ajustado para mayor compacidad */
     text-align: justify !important;
     width: 100% !important;
     margin: 0 !important;
@@ -5396,7 +5490,15 @@ h6 {
     }
 
     .blog-photo {
+        flex: none !important;
+        width: 100% !important;
         height: 250px !important;
+    }
+
+    .blog-content {
+        flex: none !important;
+        width: 100% !important;
+        padding: 1.5rem !important;
     }
 }
 
