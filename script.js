@@ -116,7 +116,7 @@ function showMessage(message, type) {
 const servicesData = {
     'vigilancia-fija': {
         title: 'Vigilancia Fija',
-        description: 'Ofrecemos servicios de vigilancia física fija con personal altamente calificado y rigurosamente seleccionado. Nuestros guardias están entrenados en control de accesos, prevención de pérdidas, atención al cliente y respuesta ante emergencias. Ideal para conjuntos residenciales, edificios corporativos, plantas industriales y centros comerciales.',
+        description: 'Ofrecemos servicios de vigilancia física fija con personal altamente calificado y rigurosamente seleccionado. Nuestros vigilantes están entrenados en control de accesos, prevención de pérdidas, atención al cliente y respuesta ante emergencias. Ideal para conjuntos residenciales, edificios corporativos, plantas industriales y centros comerciales.',
         image: 'images/01 Vigilancia Fijaa.png',
         pdf: 'docs/portafolio-vigilancia-fija.pdf'
     },
